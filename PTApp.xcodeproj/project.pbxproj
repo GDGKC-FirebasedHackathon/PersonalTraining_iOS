@@ -21,6 +21,7 @@
 		04ED6B111E57362C005008F6 /* HomeworkVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B101E57362C005008F6 /* HomeworkVO.swift */; };
 		04ED6B131E573757005008F6 /* MotionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B121E573757005008F6 /* MotionVO.swift */; };
 		04ED6B161E573F61005008F6 /* GraphVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B151E573F61005008F6 /* GraphVO.swift */; };
+		04ED6B1A1E575552005008F6 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B191E575552005008F6 /* MealModel.swift */; };
 		1BD4966B5204BA32413A1AF2 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B07AA82A16798153EAE517 /* Pods_PTApp.framework */; };
 		260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */; };
 		260F0C641E56CD8A00B02D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C621E56CD8A00B02D4C /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		04ED6B101E57362C005008F6 /* HomeworkVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkVO.swift; sourceTree = "<group>"; };
 		04ED6B121E573757005008F6 /* MotionVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionVO.swift; sourceTree = "<group>"; };
 		04ED6B151E573F61005008F6 /* GraphVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVO.swift; sourceTree = "<group>"; };
+		04ED6B191E575552005008F6 /* MealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C631E56CD8A00B02D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				04ED6B0C1E57318A005008F6 /* SignupModel.swift */,
 				04ED6B0A1E57300A005008F6 /* HomeworkModel.swift */,
 				791FC56F1E5720A800709620 /* LoginModel.swift */,
+				04ED6B191E575552005008F6 /* MealModel.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				791FC5741E5728D500709620 /* CustomView.swift in Sources */,
 				791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */,
 				04ED6B031E572FCF005008F6 /* CustomerVO.swift in Sources */,
+				04ED6B1A1E575552005008F6 /* MealModel.swift in Sources */,
 				2653365C1E5736AB001B32AF /* TrainingListCell.swift in Sources */,
 				791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */,
 				2653365E1E574621001B32AF /* TrainingDetailWebviewVC.swift in Sources */,
