@@ -16,7 +16,7 @@ enum MealType {
 
 class DietDetailVC: UITableViewController {
     
-    var dietID = 0
+    var dietID = ""
     var mealList = [AnyObject]()
 
     override func viewDidLoad() {

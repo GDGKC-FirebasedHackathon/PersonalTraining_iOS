@@ -89,7 +89,7 @@ extension UIImageView {
             if url.isEmpty {
                 self.image = defaultImg
             } else {
-                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))], progressBlock: nil, completionHandler: nil)
+                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(.fade(0.5))], progressBlock: nil, completionHandler: nil)
             }
         } else {
             self.image = defaultImg

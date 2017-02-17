@@ -31,7 +31,7 @@ class DietListVC : UITableViewController {
         let diet = dietList[indexPath.row]
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DietDetailVC") as! DietDetailVC
-        //vc.dietID = diet.id
+        vc.dietID = gsno(diet.id)
         navigationController?.pushViewController(vc, animated: true)
     }
     

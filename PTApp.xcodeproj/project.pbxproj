@@ -44,6 +44,9 @@
 		791FC5721E57247300709620 /* DietListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5711E57247300709620 /* DietListCell.swift */; };
 		791FC5741E5728D500709620 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5731E5728D500709620 /* CustomView.swift */; };
 		791FC5761E572FBF00709620 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5751E572FBF00709620 /* MealListCell.swift */; };
+		791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC57E1E573B4D00709620 /* CustomAnimatedTransitioning.swift */; };
+		791FC5811E573B6600709620 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5801E573B6600709620 /* CustomPresentationController.swift */; };
+		791FC5831E573B9000709620 /* CustomTrasitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5821E573B9000709620 /* CustomTrasitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,9 @@
 		791FC5711E57247300709620 /* DietListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietListCell.swift; sourceTree = "<group>"; };
 		791FC5731E5728D500709620 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		791FC5751E572FBF00709620 /* MealListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
+		791FC57E1E573B4D00709620 /* CustomAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		791FC5801E573B6600709620 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		791FC5821E573B9000709620 /* CustomTrasitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTrasitionDelegate.swift; sourceTree = "<group>"; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +271,7 @@
 		791FC5621E57172600709620 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				791FC5771E573B1100709620 /* PresentationController */,
 				791FC56D1E57201D00709620 /* CustomLoadingView.swift */,
 				791FC5731E5728D500709620 /* CustomView.swift */,
 				6C52182B1E5722F50072325D /* LineChartView.swift */,
@@ -315,6 +322,16 @@
 				04ED6AE01E56F70A005008F6 /* LoginVC.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		791FC5771E573B1100709620 /* PresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				791FC57E1E573B4D00709620 /* CustomAnimatedTransitioning.swift */,
+				791FC5801E573B6600709620 /* CustomPresentationController.swift */,
+				791FC5821E573B9000709620 /* CustomTrasitionDelegate.swift */,
+			);
+			name = PresentationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				791FC5761E572FBF00709620 /* MealListCell.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
 				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
@@ -453,6 +471,7 @@
 				26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */,
 				04ED6B041E572FCF005008F6 /* DietVO.swift in Sources */,
 				6C52182C1E5722F50072325D /* LineChartView.swift in Sources */,
+				791FC5811E573B6600709620 /* CustomPresentationController.swift in Sources */,
 				04ED6ADF1E56F38C005008F6 /* SignUpVC.swift in Sources */,
 				04ED6B0B1E57300A005008F6 /* HomeworkModel.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
@@ -464,6 +483,7 @@
 				791FC5701E5720A800709620 /* LoginModel.swift in Sources */,
 				6C52182E1E5723BA0072325D /* GraphVC.swift in Sources */,
 				04ED6B021E572FCF005008F6 /* CommentVO.swift in Sources */,
+				791FC5831E573B9000709620 /* CustomTrasitionDelegate.swift in Sources */,
 				791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */,
 				04ED6B051E572FCF005008F6 /* MealVO.swift in Sources */,
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
