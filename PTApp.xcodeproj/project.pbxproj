@@ -18,6 +18,8 @@
 		04ED6B071E572FCF005008F6 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B011E572FCF005008F6 /* UserVO.swift */; };
 		04ED6B0B1E57300A005008F6 /* HomeworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B0A1E57300A005008F6 /* HomeworkModel.swift */; };
 		04ED6B0D1E57318A005008F6 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B0C1E57318A005008F6 /* SignupModel.swift */; };
+		04ED6B111E57362C005008F6 /* HomeworkVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B101E57362C005008F6 /* HomeworkVO.swift */; };
+		04ED6B131E573757005008F6 /* MotionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B121E573757005008F6 /* MotionVO.swift */; };
 		1BD4966B5204BA32413A1AF2 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B07AA82A16798153EAE517 /* Pods_PTApp.framework */; };
 		260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */; };
 		260F0C641E56CD8A00B02D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C621E56CD8A00B02D4C /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		04ED6B011E572FCF005008F6 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		04ED6B0A1E57300A005008F6 /* HomeworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkModel.swift; sourceTree = "<group>"; };
 		04ED6B0C1E57318A005008F6 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		04ED6B101E57362C005008F6 /* HomeworkVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkVO.swift; sourceTree = "<group>"; };
+		04ED6B121E573757005008F6 /* MotionVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionVO.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C631E56CD8A00B02D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		04ED6AF81E572F7A005008F6 /* ValueObject */ = {
 			isa = PBXGroup;
 			children = (
+				04ED6B0F1E57361B005008F6 /* Training */,
 				04ED6B091E572FD4005008F6 /* User */,
 				04ED6B081E572FD1005008F6 /* Meal */,
 			);
@@ -145,6 +150,15 @@
 				04ED6B001E572FCF005008F6 /* TrainerVO.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		04ED6B0F1E57361B005008F6 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				04ED6B101E57362C005008F6 /* HomeworkVO.swift */,
+				04ED6B121E573757005008F6 /* MotionVO.swift */,
+			);
+			name = Training;
 			sourceTree = "<group>";
 		};
 		260F0C521E56CD8A00B02D4C = {
@@ -442,6 +456,7 @@
 				04ED6ADF1E56F38C005008F6 /* SignUpVC.swift in Sources */,
 				04ED6B0B1E57300A005008F6 /* HomeworkModel.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
+				04ED6B131E573757005008F6 /* MotionVO.swift in Sources */,
 				265336581E5723EA001B32AF /* TrainingListVC.swift in Sources */,
 				2653365A1E572401001B32AF /* TrainingDetailVC.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* LoginVC.swift in Sources */,
@@ -457,6 +472,7 @@
 				04ED6B031E572FCF005008F6 /* CustomerVO.swift in Sources */,
 				2653365C1E5736AB001B32AF /* TrainingListCell.swift in Sources */,
 				791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */,
+				04ED6B111E57362C005008F6 /* HomeworkVO.swift in Sources */,
 				04ED6B0D1E57318A005008F6 /* SignupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
