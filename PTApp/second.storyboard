@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4I-tw-115">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4I-tw-115">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wSv-w3-I2K">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="kHV-6d-wqX">
                                     <rect key="frame" x="0.0" y="278" width="375" height="0.0"/>
@@ -85,16 +85,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wSv-w3-I2K" secondAttribute="bottom" id="5iX-c4-H30"/>
                             <constraint firstItem="wSv-w3-I2K" firstAttribute="leading" secondItem="yKl-sN-EHV" secondAttribute="leading" id="GOj-Sg-pzp"/>
                             <constraint firstItem="TvJ-xg-pa2" firstAttribute="top" secondItem="LMy-La-cpD" secondAttribute="bottom" constant="16" id="KHO-ql-0N7"/>
                             <constraint firstItem="wSv-w3-I2K" firstAttribute="top" secondItem="yKl-sN-EHV" secondAttribute="top" id="T8F-ka-Mbj"/>
-                            <constraint firstItem="TvJ-xg-pa2" firstAttribute="top" secondItem="wSv-w3-I2K" secondAttribute="bottom" id="aY3-ey-hl2"/>
                             <constraint firstAttribute="trailing" secondItem="LMy-La-cpD" secondAttribute="trailing" constant="16" id="hLo-jv-ni8"/>
                             <constraint firstAttribute="trailing" secondItem="wSv-w3-I2K" secondAttribute="trailing" id="w7C-O7-fz9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="식단" image="meal" id="DI4-Ua-UDa"/>
-                    <navigationItem key="navigationItem" id="eOR-J7-vID"/>
+                    <navigationItem key="navigationItem" title="식단" id="eOR-J7-vID"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="wSv-w3-I2K" id="QCM-V5-YAF"/>
@@ -161,7 +161,7 @@
                                 <rect key="frame" x="25" y="226" width="325" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="클릭하여 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggt-se-8Gh">
-                                        <rect key="frame" x="98.5" y="99.5" width="129" height="17"/>
+                                        <rect key="frame" x="99" y="100" width="129" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -184,7 +184,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omk-f7-eJx">
-                                <rect key="frame" x="24" y="226.5" width="327" height="214"/>
+                                <rect key="frame" x="24" y="227" width="327" height="214"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="214" id="nOZ-BZ-qFn"/>
@@ -375,7 +375,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k4I-tw-115" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="식단" id="nVs-eo-MAN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wal-0w-297">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wal-0w-297">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
