@@ -507,7 +507,6 @@
 				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
 				6C5218321E573FA00072325D /* PopUpWeightVC.swift in Sources */,
-				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
 				04ED6B071E572FCF005008F6 /* UserVO.swift in Sources */,
 				7906C89D1E576F9C00EACBC1 /* RadioButtonsController.swift in Sources */,
 				04ED6B041E572FCF005008F6 /* DietVO.swift in Sources */,

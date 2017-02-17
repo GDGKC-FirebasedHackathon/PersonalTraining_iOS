@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftyJSON
 
+
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     var userInfo = UserVO()
     var motionArray = [MotionVO]()
@@ -59,6 +60,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loading(.start)
         selectable  = false
         userInfo.type = 0
         
