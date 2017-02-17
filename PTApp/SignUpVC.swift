@@ -15,7 +15,7 @@ class SignUpVC: UIViewController,NetworkCallback,RadioButtonControllerDelegate {
     @IBOutlet var editPhone: UITextField!
     @IBOutlet var editEmail: UITextField!
     @IBOutlet var editPW: UITextField!
-    var type:Int?
+    var type:Int = 1
     @IBOutlet weak var btn_trainer: RadioButton!
     @IBOutlet weak var btn_customer: RadioButton!
     
@@ -32,7 +32,7 @@ class SignUpVC: UIViewController,NetworkCallback,RadioButtonControllerDelegate {
     @IBAction func signUp(_ sender: AnyObject) {
         let model = SignupModel(self)
         loading(.start)
-        model.signup(email: editEmail.text!, pw: editPW.text!,name: editName.text!,type:type!,phonenumber:editPhone.text!)
+        model.signup(email: editEmail.text!, pw: editPW.text!,name: editName.text!,type:type,phonenumber:editPhone.text!)
     }
     func networkResult(resultData: Any, code: Int) {
         loading(.end)

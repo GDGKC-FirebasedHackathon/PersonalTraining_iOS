@@ -13,4 +13,5 @@ target 'PTApp' do
     pod 'GoogleSignIn'
     pod 'NVActivityIndicatorView'
     pod 'Kingfisher'
+    pod 'SwiftyJSON'
 end
