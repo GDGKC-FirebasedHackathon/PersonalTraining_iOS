@@ -1,5 +1,5 @@
 //
-//  SearchPartner.swift
+//  SearchHelper.swift
 //  PTApp
 //
 //  Created by OhKanghoon on 2017. 2. 18..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchPartner:UIViewController{
+class SearchHelper:UIViewController{
     
     @IBOutlet var editEmail: UITextField!
     override func viewDidLoad() {
@@ -16,15 +16,12 @@ class SearchPartner:UIViewController{
     }
     
     
-    
-    
-    @IBAction func confirm(_ sender: Any) {
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Searching") as! Searching
+    @IBAction func act(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Searchings") as! Searchings
         vc.mail = editEmail.text!
         navigationController?.pushViewController(vc, animated: false)
-        
     }
     
+
     
 }

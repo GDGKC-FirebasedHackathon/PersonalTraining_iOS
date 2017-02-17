@@ -260,20 +260,34 @@
             </objects>
             <point key="canvasLocation" x="-2143.1999999999998" y="-212.74362818590706"/>
         </scene>
-        <!--Search Partner-->
-        <scene sceneID="ZD1-Dk-Ijz">
+        <!--Search Helper-->
+        <scene sceneID="GbF-6R-CXN">
             <objects>
-                <viewController storyboardIdentifier="SearchPartner" id="e2B-Kk-qeO" customClass="SearchPartner" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchHelper" id="GBw-4K-Fhd" customClass="SearchHelper" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MlH-QN-2Ap"/>
-                        <viewControllerLayoutGuide type="bottom" id="ltk-9I-1Pw"/>
+                        <viewControllerLayoutGuide type="top" id="9ze-Lt-WxI"/>
+                        <viewControllerLayoutGuide type="bottom" id="gBT-je-DgR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m5b-LL-SsM">
+                    <view key="view" contentMode="scaleToFill" id="2g6-CA-MMj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxT-WP-g1w">
-                                <rect key="frame" x="0.0" y="612" width="375" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="파트너 찾기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpc-AM-CjR">
+                                <rect key="frame" x="156" y="252" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFr-rl-bKD">
+                                <rect key="frame" x="79" y="293" width="217" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFr-aW-hPG">
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.83266121150000005" blue="0.26480334999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -281,38 +295,24 @@
                                     <color key="titleColor" red="0.96928488660000001" green="1" blue="0.9947051321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirm:" destination="e2B-Kk-qeO" eventType="touchUpInside" id="EmS-5z-Rer"/>
+                                    <action selector="act:" destination="GBw-4K-Fhd" eventType="touchUpInside" id="s3z-Jr-Wn9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="파트너 찾기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-q9-Y0Z">
-                                <rect key="frame" x="156" y="244" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uKR-LW-83q">
-                                <rect key="frame" x="79" y="285" width="217" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="editEmail" destination="uKR-LW-83q" id="Z9j-jX-pAm"/>
+                        <outlet property="editEmail" destination="WFr-rl-bKD" id="aLj-md-fNQ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LCU-l8-aax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7b-1b-Exb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="493"/>
+            <point key="canvasLocation" x="-385" y="493"/>
         </scene>
-        <!--Searching-->
+        <!--Searchings-->
         <scene sceneID="jb0-Hc-PN1">
             <objects>
-                <viewController storyboardIdentifier="Searching" id="Vqf-m4-rWK" customClass="Searching" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Searchings" id="Vqf-m4-rWK" customClass="Searchings" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fK9-jo-S2w"/>
                         <viewControllerLayoutGuide type="bottom" id="TWy-od-HbV"/>
