@@ -13,9 +13,9 @@ class GraphVC: UIViewController, LineChartDelegate {
     var weightlist = [WeightVO]()
     var label = UILabel()
     // simple line with custom x axis labels
-    let xLabels: [String] = ["", "첫째", "둘째", "셋째", "넷째", ""]
+    let xLabels: [String] = ["첫째", "둘째", "셋째", "넷째", "다섯째", ""]
     
-    var xDateLabels : [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", ""]
+    var xDateLabels : [String] = ["첫째주", "둘째주", "셋째주", "넷째주", "다섯째주", ""]
     var yWeightLabels : [Float] = [10,20,30,40,50,10]
     var dbRef : FIRDatabaseReference!
     
@@ -36,14 +36,15 @@ class GraphVC: UIViewController, LineChartDelegate {
     
     //weightlist에 여러 데이터가 쌓이면, 최신 5개의 데이터만 가져온다.
     //weight와, date에는 최대 5개.
-    func recentWeight(){
+    func recentWeight(wvo: WeightVO){
         let list = weightlist
         let count = list.count
         
-        for i in 1...4{
-            xDateLabels[i] = list[count-(5-i)].date!
-            yWeightLabels[i] = list[count-(5-i)].weight!
-        }
+        xDateLabels.append(wvo.date!)
+        yWeightLabels.append(wvo.weight!)
+        xDateLabels.remove(at: 0)
+        yWeightLabels.remove(at: 0)
+        
     }
     
     func initWeight(){
@@ -56,9 +57,9 @@ class GraphVC: UIViewController, LineChartDelegate {
         super.viewDidLoad()
 
         initWeight()
-        recentWeight()
-        initChartView()
-    
+        //recentWeight()
+        //initChartView()
+        loading(.start)
         dbRef = FIRDatabase.database().reference()
         
         _ = dbRef.observe(.value,with: {
@@ -74,13 +75,24 @@ class GraphVC: UIViewController, LineChartDelegate {
                         tempList.append(wvo)
                 }
                 self.weightlist = tempList
+                self.initChartView()
+                self.refreshChart()
+                self.loading(.end)
             }
-            
+            print(self.weightlist)
         })
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func toCGFloatListFromWiegtVOList(list: [WeightVO]) -> [CGFloat] {
+        var cgFloatList = [CGFloat]()
+        for item in list {
+            cgFloatList.append(CGFloat(item.weight!))
+        }
+        return cgFloatList
     }
     
     func initChartView(){
@@ -95,11 +107,7 @@ class GraphVC: UIViewController, LineChartDelegate {
         
         // 이쪽 코드분석 좀
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[label]-|", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-80-[label]", options: [], metrics: nil, views: views))
-        
-        // simple arrays
-        let data: [CGFloat] = [15, 40, 30, 58, 40, 20]
-        //let data2: [CGFloat] = [1, 3, 5, 13, 17, 20]
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-160-[label]", options: [], metrics: nil, views: views))
         
         
         lineChart = LineChartView()
@@ -110,15 +118,20 @@ class GraphVC: UIViewController, LineChartDelegate {
         lineChart.y.grid.count = 5
         lineChart.x.labels.values = xDateLabels
         lineChart.y.labels.visible = true
-        lineChart.addLine(data)
-        //lineChart.addLine(data2)
+        
         
         lineChart.translatesAutoresizingMaskIntoConstraints = false
         lineChart.delegate = self
         self.view.addSubview(lineChart)
         views["chart"] = lineChart
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[chart]-|", options: [], metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[label]-[chart(==200)]", options: [], metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[label]-60-[chart(==200)]", options: [], metrics: nil, views: views))
+    }
+    
+    func refreshChart() {
+        lineChart.x.labels.values = xDateLabels
+        self.lineChart.clearAll()
+        self.lineChart.addLine(self.toCGFloatListFromWiegtVOList(list: weightlist))
     }
     
     /**
