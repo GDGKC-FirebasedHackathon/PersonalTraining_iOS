@@ -11,5 +11,5 @@ target 'PTApp' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod 'NVActivityIndicatorView'
-    
+    pod 'Kingfisher'
 end

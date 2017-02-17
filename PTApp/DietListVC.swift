@@ -21,7 +21,7 @@ class DietListVC : UITableViewController {
         let diet = dietList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DietListCell") as! DietListCell
         cell.txtDate.text = diet.date?.toString(format: nil)
-        //cell.imgDiet = diet.meals.last?.photo_url
+        cell.imgDiet.imageFromUrl(diet.meals.last?.photo_url, defaultImgPath: "")
         
         return cell
     }
