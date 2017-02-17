@@ -18,6 +18,8 @@
 		260F0C751E56D83D00B02D4C /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C741E56D83D00B02D4C /* third.storyboard */; };
 		260F0C771E56D84900B02D4C /* fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C761E56D84900B02D4C /* fourth.storyboard */; };
 		262F6F8E1E56EE0E00090847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */; };
+		2685C8931E56F92000C78A8C /* SecondMain_DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685C8921E56F92000C78A8C /* SecondMain_DetailVC.swift */; };
+		26C7398C1E56F70A00BAF0B9 /* SecondMain_ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7398B1E56F70A00BAF0B9 /* SecondMain_ListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		260F0C741E56D83D00B02D4C /* third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = third.storyboard; sourceTree = "<group>"; };
 		260F0C761E56D84900B02D4C /* fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = fourth.storyboard; sourceTree = "<group>"; };
 		262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2685C8921E56F92000C78A8C /* SecondMain_DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondMain_DetailVC.swift; sourceTree = "<group>"; };
+		26C7398B1E56F70A00BAF0B9 /* SecondMain_ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondMain_ListVC.swift; sourceTree = "<group>"; };
 		43293397F668F3E442293D36 /* Pods-PTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.debug.xcconfig"; sourceTree = "<group>"; };
 		70B07AA82A16798153EAE517 /* Pods_PTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				260F0C621E56CD8A00B02D4C /* Main.storyboard */,
 				260F0C701E56D82800B02D4C /* first.storyboard */,
 				260F0C721E56D83100B02D4C /* second.storyboard */,
+				26C7398B1E56F70A00BAF0B9 /* SecondMain_ListVC.swift */,
+				2685C8921E56F92000C78A8C /* SecondMain_DetailVC.swift */,
 				260F0C741E56D83D00B02D4C /* third.storyboard */,
 				260F0C761E56D84900B02D4C /* fourth.storyboard */,
 				260F0C651E56CD8A00B02D4C /* Assets.xcassets */,
@@ -232,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2685C8931E56F92000C78A8C /* SecondMain_DetailVC.swift in Sources */,
 				260F0C611E56CD8A00B02D4C /* ViewController.swift in Sources */,
+				26C7398C1E56F70A00BAF0B9 /* SecondMain_ListVC.swift in Sources */,
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
