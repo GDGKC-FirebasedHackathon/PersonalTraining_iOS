@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseStorage
 import Firebase
+import SwiftyJSON
 
 
 class MealModel:NetworkModel{
@@ -37,5 +38,17 @@ class MealModel:NetworkModel{
                 self.view.networkResult(resultData: "", code: 0)
             }
         }
+    }
+    
+    func getMealList(id: String, date: Date) {
+        let ref = self.baseRef.child(id).child(date.toString(format: nil))
+        ref.observe(.value, with: { snapshot in
+            
+            if let value = snapshot.value {
+                let data = JSON(value)
+                print(data)
+            }
+        
+        })
     }
 }

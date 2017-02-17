@@ -20,6 +20,7 @@ class DietModel: NetworkModel {
         ref.observe(.value, with: { snapshot in
             if let value = snapshot.value {
                 let data = JSON(value)
+                
                 var dvoList = [DietVO]()
                 if let dic = data.dictionary {
                     for item in dic {

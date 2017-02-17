@@ -17,7 +17,7 @@ class DietListVC : UIViewController, NetworkCallback {
     override func viewDidLoad() {
         print("@@@@@@@@@", partnerID)
         let model = DietModel(self)
-        loading(.start)
+        //loading(.start)
         model.getDietList(uid: userID)
     }
     
@@ -61,7 +61,7 @@ extension DietListVC: UITableViewDelegate, UITableViewDataSource {
         let diet = dietList[indexPath.row]
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DietDetailVC") as! DietDetailVC
-        vc.dietID = gsno(diet.id)
+        vc.dietDate = diet.date!
         navigationController?.pushViewController(vc, animated: true)
     }
 }
