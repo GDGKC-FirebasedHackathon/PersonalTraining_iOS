@@ -15,12 +15,14 @@ class TrainingDetailWebviewVC: UIViewController, UIWebViewDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         MotionWebview.delegate = self
-        if let url = URL(string: webviewURL!) {
-            let request = URLRequest(url: url)
-            MotionWebview.loadRequest(request)
+        if let receivedURL = webviewURL {
+            if let url = URL(string: receivedURL) {
+                let request = URLRequest(url: url)
+                MotionWebview.loadRequest(request)
+            }
         }
     }
-
-
-
+    
+    
+    
 }

@@ -14,8 +14,17 @@ class TrainingListVC: UICollectionViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        motionArray.append(MotionVO(id: "1"))
         
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "1"))
          }
     
     
@@ -36,7 +45,7 @@ class TrainingListVC: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
      
         let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! TrainingDetailVC
-        
+        vc.selectedMotion = motionArray[indexPath.row]
         //vc.dietID = diet.id
         navigationController?.pushViewController(vc, animated: true)
     }
