@@ -8,7 +8,7 @@
 
 class MotionVO{
     
-    init(id:String?){
+    init(id:Int?){
         self.id = id
         self.name = "런지 [Lunge]"
         self.desc = "대표적인 다리 운동 중 하나로 허벅지와 엉덩이에 탄력을 주며 하체 근력을 강화하는 운동이다. 자신의 체중을 이용해 실시하더라도 충분한 자극을 느낄 수 있지만, 더 강한 운동 효과를 원한다면 덤벨이나 바벨을 이용하여 천천히 운동하는 것이 좋다."
@@ -17,7 +17,7 @@ class MotionVO{
        
     }
     
-    init(id:String?,name:String?,desc:String?,thumbnail_url:String?,detail_url:String?,done:Int?){
+    init(id:Int?,name:String?,desc:String?,thumbnail_url:String?,detail_url:String?,done:Int?){
         self.id = id
         self.name = name
         self.desc = desc
@@ -26,7 +26,7 @@ class MotionVO{
         self.done = done
     }
     
-    var id:String?
+    var id:Int?
     var name:String?
     var desc:String?
     var thumbnail_url:String?

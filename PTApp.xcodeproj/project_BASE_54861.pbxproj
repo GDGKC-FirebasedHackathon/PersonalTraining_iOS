@@ -22,9 +22,6 @@
 		04ED6B131E573757005008F6 /* MotionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B121E573757005008F6 /* MotionVO.swift */; };
 		04ED6B161E573F61005008F6 /* GraphVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B151E573F61005008F6 /* GraphVO.swift */; };
 		04ED6B1A1E575552005008F6 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B191E575552005008F6 /* MealModel.swift */; };
-		04ED6B1E1E578AB5005008F6 /* PartnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B1D1E578AB5005008F6 /* PartnerModel.swift */; };
-		04ED6B201E5796A7005008F6 /* SearchPartner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B1F1E5796A7005008F6 /* SearchPartner.swift */; };
-		04ED6B221E57983E005008F6 /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B211E57983E005008F6 /* Searching.swift */; };
 		1BD4966B5204BA32413A1AF2 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B07AA82A16798153EAE517 /* Pods_PTApp.framework */; };
 		260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */; };
 		260F0C641E56CD8A00B02D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C621E56CD8A00B02D4C /* Main.storyboard */; };
@@ -52,7 +49,6 @@
 		7906C8A71E57708C00EACBC1 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906C8A61E57708C00EACBC1 /* MealListCell.swift */; };
 		7906C8A91E5770AE00EACBC1 /* second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7906C8A81E5770AE00EACBC1 /* second.storyboard */; };
 		7906C8AB1E5770FF00EACBC1 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906C8AA1E5770FF00EACBC1 /* CommentView.swift */; };
-		7906C8AD1E57876100EACBC1 /* DietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906C8AC1E57876100EACBC1 /* DietModel.swift */; };
 		791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5691E571EF300709620 /* NetworkModel.swift */; };
 		791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56B1E571F2000709620 /* NetworkCallback.swift */; };
 		791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56D1E57201D00709620 /* CustomLoadingView.swift */; };
@@ -79,9 +75,6 @@
 		04ED6B121E573757005008F6 /* MotionVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionVO.swift; sourceTree = "<group>"; };
 		04ED6B151E573F61005008F6 /* GraphVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVO.swift; sourceTree = "<group>"; };
 		04ED6B191E575552005008F6 /* MealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
-		04ED6B1D1E578AB5005008F6 /* PartnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerModel.swift; sourceTree = "<group>"; };
-		04ED6B1F1E5796A7005008F6 /* SearchPartner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPartner.swift; sourceTree = "<group>"; };
-		04ED6B211E57983E005008F6 /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Searching.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C631E56CD8A00B02D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,7 +105,6 @@
 		7906C8A61E57708C00EACBC1 /* MealListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
 		7906C8A81E5770AE00EACBC1 /* second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = second.storyboard; sourceTree = "<group>"; };
 		7906C8AA1E5770FF00EACBC1 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
-		7906C8AC1E57876100EACBC1 /* DietModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietModel.swift; sourceTree = "<group>"; };
 		791FC5691E571EF300709620 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		791FC56B1E571F2000709620 /* NetworkCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
 		791FC56D1E57201D00709620 /* CustomLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
@@ -164,8 +156,6 @@
 				04ED6B0A1E57300A005008F6 /* HomeworkModel.swift */,
 				791FC56F1E5720A800709620 /* LoginModel.swift */,
 				04ED6B191E575552005008F6 /* MealModel.swift */,
-				04ED6B1D1E578AB5005008F6 /* PartnerModel.swift */,
-				7906C8AC1E57876100EACBC1 /* DietModel.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -368,8 +358,6 @@
 			children = (
 				04ED6ADE1E56F38C005008F6 /* SignUpVC.swift */,
 				04ED6AE01E56F70A005008F6 /* LoginVC.swift */,
-				04ED6B1F1E5796A7005008F6 /* SearchPartner.swift */,
-				04ED6B211E57983E005008F6 /* Searching.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -516,6 +504,7 @@
 				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
 				6C5218321E573FA00072325D /* PopUpWeightVC.swift in Sources */,
+				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
 				04ED6B071E572FCF005008F6 /* UserVO.swift in Sources */,
 				7906C89D1E576F9C00EACBC1 /* RadioButtonsController.swift in Sources */,
 				04ED6B041E572FCF005008F6 /* DietVO.swift in Sources */,
@@ -529,17 +518,13 @@
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
 				04ED6B131E573757005008F6 /* MotionVO.swift in Sources */,
 				265336581E5723EA001B32AF /* TrainingListVC.swift in Sources */,
-				04ED6B1E1E578AB5005008F6 /* PartnerModel.swift in Sources */,
 				2653365A1E572401001B32AF /* TrainingDetailVC.swift in Sources */,
-				04ED6B221E57983E005008F6 /* Searching.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* LoginVC.swift in Sources */,
-				7906C8AD1E57876100EACBC1 /* DietModel.swift in Sources */,
 				791FC5701E5720A800709620 /* LoginModel.swift in Sources */,
 				6C52182E1E5723BA0072325D /* GraphVC.swift in Sources */,
 				04ED6B021E572FCF005008F6 /* CommentVO.swift in Sources */,
 				791FC5831E573B9000709620 /* CustomTrasitionDelegate.swift in Sources */,
 				6C5218341E5761130072325D /* WeightVO.swift in Sources */,
-				04ED6B201E5796A7005008F6 /* SearchPartner.swift in Sources */,
 				7906C8A21E57706800EACBC1 /* DietListCell.swift in Sources */,
 				791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */,
 				04ED6B051E572FCF005008F6 /* MealVO.swift in Sources */,
