@@ -9,6 +9,7 @@
 import UIKit
 
 class MealPostVC: UIViewController {
+class MealPostVC: UIViewController, NetworkCallback {
     
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var nullView: CustomView!
@@ -32,6 +33,22 @@ class MealPostVC: UIViewController {
     
     @IBAction func postMeal(_ sender: Any) {
         
+        let photo = UIImageJPEGRepresentation(imgMeal.image!, 0.6)!
+        let mvo = MealVO(type: rbController.selectedRow, photo_url: nil, comment: [CommentVO]())
+        
+        let model = MealModel(self)
+        loading(.start)
+        model.add_meal(id: "7igkgQtjVjRyFUPiWKzeqUWRhw22", date: Date(), meal: mvo, imgData: photo)
+    }
+    
+    func networkResult(resultData: Any, code: Int) {
+        loading(.end)
+        let alert = UIAlertController(title: "식단 업로드", message: "업로드 완료되었습니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default) {_ in
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
     
 }

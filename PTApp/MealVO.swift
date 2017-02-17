@@ -17,6 +17,12 @@ class MealVO{
         self.comment = comment
     }
     
+    init(type:Int?,photo_url:String?,comment:[CommentVO]){
+        self.type = type
+        self.photo_url = photo_url
+        self.comment = comment
+    }
+    
     var meal_id:Int?
     var type:Int?
     var photo_url:String?

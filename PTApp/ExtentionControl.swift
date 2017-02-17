@@ -5,9 +5,29 @@
 //  Created by OhKanghoon on 2017. 2. 17..
 //  Copyright © 2017년 GDGKC-FirebasedHackathon. All rights reserved.
 //
+
 import UIKit
+import Firebase
 
 extension UIViewController{
+    
+    var userID: String {
+        var id = ""
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                print("@@@@ Login User @@@@ : \(user.uid)")
+                id =  user.uid
+            } else {
+                id =  ""
+            }
+        }
+        return id
+    }
+    
+    var partnerID: String {
+        return UserDefaults.standard.string(forKey: "partnerID")
+    }
+    
     func simpleAlert(title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default)
