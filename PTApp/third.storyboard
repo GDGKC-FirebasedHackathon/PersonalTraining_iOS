@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Training ListVC-->
+        <!--Item-->
         <scene sceneID="q5F-lM-Wom">
             <objects>
                 <collectionViewController id="wUI-XB-dJh" customClass="TrainingListVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="epc-Bt-sRx">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="epc-Bt-sRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +60,7 @@
                             <outlet property="delegate" destination="wUI-XB-dJh" id="C4H-ig-LiC"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" image="dumbbell-for-training" id="thN-vL-ozz"/>
                     <navigationItem key="navigationItem" id="pCs-5a-GNu">
                         <barButtonItem key="rightBarButtonItem" title="선택" id="BUw-t6-BV6">
                             <connections>
@@ -180,4 +181,7 @@
             <point key="canvasLocation" x="892" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dumbbell-for-training" width="32" height="32"/>
+    </resources>
 </document>

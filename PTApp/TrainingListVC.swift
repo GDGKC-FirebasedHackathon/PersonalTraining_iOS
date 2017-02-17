@@ -10,6 +10,7 @@ import UIKit
 
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
 
+    var userInfo = UserVO()
     var motionArray = [MotionVO]()
     var checkBoxArray = [CustomCheckBox]()
     var selectedArray = NSMutableArray()
@@ -22,17 +23,32 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     @IBAction func btnSelect(_ sender: Any) {
         print("selectableChanged clicked!")
         
-        if(selectable == false){
+        if(selectable == false){ // 선택버튼 누르면
             for checkbox in checkBoxArray{
                 checkbox.isHidden = false
             }
             self.btnSelectMotion.title = "전송"
             selectable = true
         }
-        else if(selectable == true){
+        else if(selectable == true){ //전송버튼 누르면
             for checkbox in checkBoxArray{
+                checkbox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
                 checkbox.isHidden = true
+                           }
+            let customTransitionDelegate = CustomTrasitionDelegate(height: 420)
+            transitioningDelegate = customTransitionDelegate
+            
+            if(userInfo.type == 0){
+                // 트레이너인 경우
+                simpleAlert(title: "전송 완료", msg: "고객에게 오늘의 동작이 전송되었습니다.")
+                
             }
+            else if(userInfo.type == 1){
+                // 고객인 경우
+                simpleAlert(title: "전송 완료", msg: "트레이너에게 완료된 동작이 전송되었습니다.")
+                
+            }
+            selectedArray.removeAllObjects()
             self.btnSelectMotion.title = "선택"
             selectable = false
         }
@@ -44,6 +60,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         selectable  = false
+        userInfo.type = 0
         
         motionArray.append(MotionVO(id: "1"))
         motionArray.append(MotionVO(id: "2"))
