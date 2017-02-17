@@ -20,8 +20,12 @@
 		260F0C751E56D83D00B02D4C /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C741E56D83D00B02D4C /* third.storyboard */; };
 		260F0C771E56D84900B02D4C /* fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C761E56D84900B02D4C /* fourth.storyboard */; };
 		262F6F8E1E56EE0E00090847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */; };
-		2685C8931E56F92000C78A8C /* SecondMainDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685C8921E56F92000C78A8C /* SecondMainDetailVC.swift */; };
-		26C7398C1E56F70A00BAF0B9 /* SecondMainListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7398B1E56F70A00BAF0B9 /* SecondMainListVC.swift */; };
+		2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685C8921E56F92000C78A8C /* DietDetailVC.swift */; };
+		26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */; };
+		791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5691E571EF300709620 /* NetworkModel.swift */; };
+		791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56B1E571F2000709620 /* NetworkCallback.swift */; };
+		791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56D1E57201D00709620 /* CustomLoadingView.swift */; };
+		791FC5701E5720A800709620 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56F1E5720A800709620 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +43,14 @@
 		260F0C741E56D83D00B02D4C /* third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = third.storyboard; sourceTree = "<group>"; };
 		260F0C761E56D84900B02D4C /* fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = fourth.storyboard; sourceTree = "<group>"; };
 		262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2685C8921E56F92000C78A8C /* SecondMainDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondMainDetailVC.swift; sourceTree = "<group>"; };
-		26C7398B1E56F70A00BAF0B9 /* SecondMainListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondMainListVC.swift; sourceTree = "<group>"; };
+		2685C8921E56F92000C78A8C /* DietDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietDetailVC.swift; sourceTree = "<group>"; };
+		26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietListVC.swift; sourceTree = "<group>"; };
 		43293397F668F3E442293D36 /* Pods-PTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.debug.xcconfig"; sourceTree = "<group>"; };
 		70B07AA82A16798153EAE517 /* Pods_PTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		791FC5691E571EF300709620 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		791FC56B1E571F2000709620 /* NetworkCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
+		791FC56D1E57201D00709620 /* CustomLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
+		791FC56F1E5720A800709620 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +161,9 @@
 		791FC5601E57170D00709620 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				791FC5691E571EF300709620 /* NetworkModel.swift */,
+				791FC56B1E571F2000709620 /* NetworkCallback.swift */,
+				791FC56F1E5720A800709620 /* LoginModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 		791FC5621E57172600709620 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				791FC56D1E57201D00709620 /* CustomLoadingView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -189,8 +201,8 @@
 		791FC5661E571C8900709620 /* Diet */ = {
 			isa = PBXGroup;
 			children = (
-				26C7398B1E56F70A00BAF0B9 /* SecondMainListVC.swift */,
-				2685C8921E56F92000C78A8C /* SecondMainDetailVC.swift */,
+				26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */,
+				2685C8921E56F92000C78A8C /* DietDetailVC.swift */,
 			);
 			name = Diet;
 			sourceTree = "<group>";
@@ -340,12 +352,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2685C8931E56F92000C78A8C /* SecondMainDetailVC.swift in Sources */,
-				26C7398C1E56F70A00BAF0B9 /* SecondMainListVC.swift in Sources */,
+				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
+				26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */,
 				04ED6ADF1E56F38C005008F6 /* SignUpVC.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* LoginVC.swift in Sources */,
+				791FC5701E5720A800709620 /* LoginModel.swift in Sources */,
+				791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */,
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
+				791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */,
+				791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
