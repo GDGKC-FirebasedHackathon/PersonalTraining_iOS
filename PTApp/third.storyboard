@@ -12,7 +12,7 @@
         <scene sceneID="q5F-lM-Wom">
             <objects>
                 <collectionViewController id="wUI-XB-dJh" customClass="TrainingListVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="epc-Bt-sRx">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="epc-Bt-sRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,9 +42,14 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DT-nP-GBL" customClass="CustomCheckBox" customModule="PTApp" customModuleProvider="target">
+                                            <rect key="frame" x="131" y="6" width="46" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <connections>
+                                    <outlet property="btnCheckbox" destination="2DT-nP-GBL" id="Itf-M3-2Cd"/>
                                     <outlet property="imgMotion" destination="sWm-4x-eMq" id="UTM-cr-ATJ"/>
                                     <outlet property="txtMotionName" destination="RqF-Os-adC" id="hvO-8l-FEo"/>
                                 </connections>

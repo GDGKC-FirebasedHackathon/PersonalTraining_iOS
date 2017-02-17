@@ -11,20 +11,23 @@ import UIKit
 class TrainingListVC: UICollectionViewController {
 
     var motionArray = [MotionVO]()
+    var selectedArray = NSMutableArray()
+    
+    let selectedImage = UIImage(named: "selected")
+    let unselecedImage  = UIImage(named: "unselected")
    
     override func viewDidLoad() {
         super.viewDidLoad()
         motionArray.append(MotionVO(id: "1"))
-        
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "1"))
+        motionArray.append(MotionVO(id: "2"))
+        motionArray.append(MotionVO(id: "3"))
+        motionArray.append(MotionVO(id: "4"))
+        motionArray.append(MotionVO(id: "5"))
+        motionArray.append(MotionVO(id: "6"))
+        motionArray.append(MotionVO(id: "7"))
+        motionArray.append(MotionVO(id: "8"))
+        motionArray.append(MotionVO(id: "9"))
+        motionArray.append(MotionVO(id: "10"))
          }
     
     
@@ -32,13 +35,23 @@ class TrainingListVC: UICollectionViewController {
         return motionArray.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "motionCell", for: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "motionCell", for: indexPath) as UICollectionViewCell
         
-        var motionNameLabel = cell.viewWithTag(1) as! UILabel
+        let motionNameLabel = cell.viewWithTag(1) as! UILabel
         motionNameLabel.text = motionArray[indexPath.row].name
         
-        var motionImgView = cell.viewWithTag(2) as! UIImageView
+        let motionImgView = cell.viewWithTag(2) as! UIImageView
         motionImgView.imageFromUrl(motionArray[indexPath.row].thumbnail_url, defaultImgPath: "")
+        
+        let motionCheckBox = cell.viewWithTag(3) as! CustomCheckBox
+        motionCheckBox.temp = gino(Int(gsno(motionArray[indexPath.row].id)))
+        motionCheckBox.addTarget(self, action: #selector(TrainingListVC.tickClicked(sender:)), for: .touchUpInside)
+        
+        if selectedArray.contains(gino(Int(gsno(motionArray[indexPath.row].id)))){
+            motionCheckBox.setBackgroundImage(selectedImage, for: UIControlState.normal)
+        }else{
+            motionCheckBox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
+        }
         
         return cell
     }
@@ -46,7 +59,19 @@ class TrainingListVC: UICollectionViewController {
      
         let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! TrainingDetailVC
         vc.selectedMotion = motionArray[indexPath.row]
-        //vc.dietID = diet.id
+        
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tickClicked(sender: CustomCheckBox!){
+        let value = sender.temp
+        if selectedArray.contains(gino(value)){
+            selectedArray.remove(gino(value))
+        }else{
+            selectedArray.add(gino(value))
+        }
+        
+        collectionView?.reloadData()
+        
     }
 }
