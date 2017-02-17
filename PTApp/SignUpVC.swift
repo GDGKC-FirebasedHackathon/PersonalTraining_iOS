@@ -36,15 +36,16 @@ class SignUpVC: UIViewController,NetworkCallback,RadioButtonControllerDelegate {
     }
     func networkResult(resultData: Any, code: Int) {
         loading(.end)
-        navigationController?.popViewController(animated: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchHelper") as! SearchHelper
+        navigationController?.pushViewController(vc, animated: true)
     }
     func didSelectButton(_ aButton: RadioButton?) {
         if let t:String = aButton?.titleLabel?.text{
             if t == "btn_trainer"{
-                type == 0
+                type = 0
             }
             else{
-                type == 1
+                type = 1
             }
         }
     }

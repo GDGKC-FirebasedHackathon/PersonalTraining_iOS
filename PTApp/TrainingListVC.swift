@@ -84,6 +84,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
                   self.motionArray = tempList
                 
             }
+            self.loading(.end)
       self.collectionView?.reloadData()
         })
         

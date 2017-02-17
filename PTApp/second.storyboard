@@ -161,7 +161,7 @@
                                 <rect key="frame" x="25" y="226" width="325" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="클릭하여 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggt-se-8Gh">
-                                        <rect key="frame" x="98.5" y="99.5" width="129" height="17"/>
+                                        <rect key="frame" x="99" y="100" width="129" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -184,7 +184,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omk-f7-eJx">
-                                <rect key="frame" x="24" y="226.5" width="327" height="214"/>
+                                <rect key="frame" x="24" y="227" width="327" height="214"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="214" id="nOZ-BZ-qFn"/>
