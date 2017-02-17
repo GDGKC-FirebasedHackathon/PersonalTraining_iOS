@@ -12,20 +12,15 @@ import Firebase
 extension UIViewController{
     
     var userID: String {
-        var id = ""
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let user = user {
-                print("@@@@ Login User @@@@ : \(user.uid)")
-                id =  user.uid
-            } else {
-                id =  ""
-            }
+        if let user = FIRAuth.auth()?.currentUser {
+            return user.uid
+        } else {
+            return ""
         }
-        return id
     }
     
     var partnerID: String {
-        return UserDefaults.standard.string(forKey: "partnerID")
+        return gsno(UserDefaults.standard.string(forKey: "partnerID"))
     }
     
     func simpleAlert(title: String, msg: String) {

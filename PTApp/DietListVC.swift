@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DietListVC : UIViewController, UITableViewDelegate {
+class DietListVC : UIViewController, NetworkCallback {
     
     var dietList = [DietVO]()
     
     override func viewDidLoad() {
-//        let mvo = MealVO(meal_id: 0, type: MealType.breakfast.rawValue, photo_url: "", comment: [CommentVO]())
-//        let dvo = DietVO(id: "qq@qq.com", date: Date(), meals: <#T##[MealVO]#>, trainer_id: <#T##String?#>, customer_id: <#T##String?#>)
-//        dietList.append(<#T##newElement: Element##Element#>)
+        print("@@@@@@@@@", partnerID)
+        let model = DietModel(self)
+        model.getDietList(uid: userID)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +26,17 @@ class DietListVC : UIViewController, UITableViewDelegate {
         tabBarController?.tabBar.isHidden = true
     }
     
+    @IBAction func postMeal(_ sender: AnyObject) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func networkResult(resultData: Any, code: Int) {
+        
+    }
+}
+
+extension DietListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dietList.count
     }
@@ -48,9 +59,4 @@ class DietListVC : UIViewController, UITableViewDelegate {
         vc.dietID = gsno(diet.id)
         navigationController?.pushViewController(vc, animated: true)
     }
-    @IBAction func postMeal(_ sender: AnyObject) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
 }

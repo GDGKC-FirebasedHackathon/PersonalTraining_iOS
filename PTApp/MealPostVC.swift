@@ -8,7 +8,6 @@
 
 import UIKit
 
-class MealPostVC: UIViewController {
 class MealPostVC: UIViewController, NetworkCallback {
     
     @IBOutlet var stackView: UIStackView!

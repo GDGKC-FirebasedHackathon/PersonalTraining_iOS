@@ -28,7 +28,7 @@ class MealModel:NetworkModel{
                 strURL = downloadURL?.absoluteString
                 
                 let ref = FIRDatabase.database().reference().child("Diet").child(id).child(date.toString(format:"yyyyMd")).childByAutoId()
-                ref.setValue(["name":self.gino(meal.type),"comment":meal.comment,"photo_url":self.gsno(strURL)])
+                ref.setValue(["type":self.gino(meal.type),"comment":meal.comment,"photo_url":self.gsno(strURL)])
                 self.view.networkResult(resultData: "", code: 0)
             }
         }
