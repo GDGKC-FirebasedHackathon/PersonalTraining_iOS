@@ -41,6 +41,7 @@
 		26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */; };
 		6C52182C1E5722F50072325D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52182B1E5722F50072325D /* LineChartView.swift */; };
 		6C52182E1E5723BA0072325D /* GraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52182D1E5723BA0072325D /* GraphVC.swift */; };
+		7906C88F1E576CCA00EACBC1 /* CustomCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7906C88E1E576CCA00EACBC1 /* CustomCheckBox.swift */; };
 		791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5691E571EF300709620 /* NetworkModel.swift */; };
 		791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56B1E571F2000709620 /* NetworkCallback.swift */; };
 		791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56D1E57201D00709620 /* CustomLoadingView.swift */; };
@@ -95,6 +96,7 @@
 		6C52182B1E5722F50072325D /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		6C52182D1E5723BA0072325D /* GraphVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVC.swift; sourceTree = "<group>"; };
 		70B07AA82A16798153EAE517 /* Pods_PTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7906C88E1E576CCA00EACBC1 /* CustomCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCheckBox.swift; sourceTree = "<group>"; };
 		791FC5691E571EF300709620 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		791FC56B1E571F2000709620 /* NetworkCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
 		791FC56D1E57201D00709620 /* CustomLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		791FC5621E57172600709620 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7906C88E1E576CCA00EACBC1 /* CustomCheckBox.swift */,
 				791FC5771E573B1100709620 /* PresentationController */,
 				791FC56D1E57201D00709620 /* CustomLoadingView.swift */,
 				791FC5731E5728D500709620 /* CustomView.swift */,
@@ -495,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791FC58A1E57475F00709620 /* RadioButton.swift in Sources */,
+				7906C88F1E576CCA00EACBC1 /* CustomCheckBox.swift in Sources */,
 				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				791FC5761E572FBF00709620 /* MealListCell.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
