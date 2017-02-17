@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--더보기-->
+        <!--View Controller-->
         <scene sceneID="s4O-VY-zde">
             <objects>
                 <viewController id="Yrj-ke-O5B" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="더보기" id="BC5-ad-SOu"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="BC5-ad-SOu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-sM-zg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
