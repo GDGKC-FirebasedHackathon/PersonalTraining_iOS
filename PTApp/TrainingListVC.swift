@@ -10,16 +10,32 @@ import UIKit
 
 class TrainingListVC: UICollectionViewController {
 
+    var Array = [String]()
+    var ButtonArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        Array = ["a","b","c","d"]
+        ButtonArray = ["a","b","c","d"]
+        
+         }
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return Array.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "motionCell", for: indexPath) as UICollectionViewCell
+        
+        var Label = cell.viewWithTag(1) as! UILabel
+        
+        Label.text = Array[indexPath.row]
+      
+        var Button = cell.viewWithTag(2) as! UIButton
+        
+        Button.setTitle(ButtonArray[indexPath.row], for: UIControlState.normal)
+        
         return cell
     }
 }
