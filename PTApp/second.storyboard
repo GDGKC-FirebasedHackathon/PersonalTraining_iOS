@@ -244,10 +244,10 @@
         <scene sceneID="REn-LN-iHw">
             <objects>
                 <tableViewController storyboardIdentifier="DietDetailVC" id="BHq-jl-R8F" customClass="DietDetailVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="480" sectionHeaderHeight="28" sectionFooterHeight="28" id="00d-Bj-woj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="480" sectionHeaderHeight="28" sectionFooterHeight="28" id="00d-Bj-woj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="NDK-SF-CA2">
                             <rect key="frame" x="0.0" y="508" width="375" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,20 +258,20 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SVG-zK-j3v" id="ucI-IA-Fub">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="479"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="480"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9b-aB-ms1" customClass="CustomView" customModule="PTApp" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="16" width="343" height="447"/>
+                                            <rect key="frame" x="16" y="16" width="343" height="448"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아침" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-M2-zOs">
                                                     <rect key="frame" x="157" y="15" width="30" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-x7-hrg">
-                                                    <rect key="frame" x="8" y="44" width="327" height="214"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-x7-hrg">
+                                                    <rect key="frame" x="8" y="51" width="327" height="214"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="214" id="4EG-zc-zyW"/>
                                                     </constraints>
@@ -291,20 +291,20 @@
                                                     </constraints>
                                                 </scrollView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXz-bc-vkC">
-                                                    <rect key="frame" x="0.0" y="400" width="343" height="1"/>
+                                                    <rect key="frame" x="0.0" y="401" width="343" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="QM7-LZ-S1g"/>
                                                     </constraints>
                                                 </view>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tS6-if-KT4">
-                                                    <rect key="frame" x="8" y="409" width="290" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="코멘트를 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tS6-if-KT4">
+                                                    <rect key="frame" x="8" y="410" width="290" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1G4-R2-YSm">
-                                                    <rect key="frame" x="305" y="414" width="30" height="21"/>
+                                                    <rect key="frame" x="305" y="415" width="30" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -324,7 +324,7 @@
                                                 <constraint firstItem="aRC-M2-zOs" firstAttribute="top" secondItem="x9b-aB-ms1" secondAttribute="top" constant="15" id="ZZO-Dp-cBt"/>
                                                 <constraint firstAttribute="trailing" secondItem="eEI-x7-hrg" secondAttribute="trailing" constant="8" id="agt-jb-cYo"/>
                                                 <constraint firstItem="tS6-if-KT4" firstAttribute="top" secondItem="cXz-bc-vkC" secondAttribute="bottom" constant="8" id="bsJ-th-J2l"/>
-                                                <constraint firstItem="eEI-x7-hrg" firstAttribute="top" secondItem="aRC-M2-zOs" secondAttribute="bottom" constant="8" id="e4W-fL-wGN"/>
+                                                <constraint firstItem="eEI-x7-hrg" firstAttribute="top" secondItem="aRC-M2-zOs" secondAttribute="bottom" constant="15" id="e4W-fL-wGN"/>
                                                 <constraint firstItem="eEI-x7-hrg" firstAttribute="leading" secondItem="x9b-aB-ms1" secondAttribute="leading" constant="8" id="hgx-Vj-tnp"/>
                                                 <constraint firstAttribute="trailing" secondItem="cXz-bc-vkC" secondAttribute="trailing" id="hsb-Le-2NW"/>
                                                 <constraint firstAttribute="trailing" secondItem="1G4-R2-YSm" secondAttribute="trailing" constant="8" id="poG-ik-ZUb"/>
@@ -338,11 +338,12 @@
                                                     <real key="value" value="0.5"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="x9b-aB-ms1" firstAttribute="top" secondItem="ucI-IA-Fub" secondAttribute="topMargin" constant="8" id="85C-DQ-gNP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="x9b-aB-ms1" secondAttribute="bottom" constant="8" id="DGQ-Yc-Fov"/>

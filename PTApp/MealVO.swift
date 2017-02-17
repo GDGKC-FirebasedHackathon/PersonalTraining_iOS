@@ -10,6 +10,10 @@ import Foundation
 
 class MealVO{
     
+    init() {
+        
+    }
+    
     init(meal_id: String?, type: Int?, photo_url: String?) {
         self.meal_id = meal_id
         self.type = type

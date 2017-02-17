@@ -41,12 +41,22 @@ class MealModel:NetworkModel{
     }
     
     func getMealList(id: String, date: Date) {
-        let ref = self.baseRef.child(id).child(date.toString(format: nil))
+        print(date.toString(format: nil))
+        let ref = self.baseRef.child(id).child(date.toString(format: "yyyy-MM-dd"))
         ref.observe(.value, with: { snapshot in
-            
             if let value = snapshot.value {
                 let data = JSON(value)
-                print(data)
+                var mvoList = [MealVO]()
+                for dicItem in data.dictionaryValue {
+                    if dicItem.key != "date" {
+                        let mvo = MealVO()
+                        mvo.type = dicItem.value["type"].int
+                        mvo.photo_url = dicItem.value["photo_url"].string
+                        mvo.meal_id = dicItem.key
+                        mvoList.append(mvo)
+                    }
+                }
+                self.view.networkResult(resultData: mvoList, code: 0)
             }
         
         })
