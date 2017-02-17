@@ -10,7 +10,7 @@ import Foundation
 
 class MealVO{
     
-    init(meal_id:Int?,type:Int?,photo_url:String?,comment:String?){
+    init(meal_id:Int?,type:Int?,photo_url:String?,comment:[CommentVO]){
         self.meal_id = meal_id
         self.type = type
         self.photo_url = photo_url
@@ -20,5 +20,5 @@ class MealVO{
     var meal_id:Int?
     var type:Int?
     var photo_url:String?
-    var comment:String?
+    var comment: [CommentVO]
 }

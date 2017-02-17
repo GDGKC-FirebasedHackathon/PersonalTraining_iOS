@@ -46,6 +46,8 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+    </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>식단 작성에 사용됩니다.</string>
 </dict>
 </plist>
