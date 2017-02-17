@@ -4,13 +4,18 @@ import QuartzCore
 
 class GraphVC: UIViewController, LineChartDelegate {
     
-    
-    
     var label = UILabel()
     // simple line with custom x axis labels
     let xLabels: [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", ""]
     
     var lineChart : LineChartView!
+    
+    
+    @IBAction func btnAddWeigth(_ sender: Any) {
+    
+        
+        
+    }
     
     
     override func viewDidLoad() {
@@ -29,7 +34,7 @@ class GraphVC: UIViewController, LineChartDelegate {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-80-[label]", options: [], metrics: nil, views: views))
         
         // simple arrays
-        let data: [CGFloat] = [3, 4, 2, 11, 13, 15]
+        let data: [CGFloat] = [15, 40, 30, 58, 40, 20]
         //let data2: [CGFloat] = [1, 3, 5, 13, 17, 20]
         
         
