@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import Firebase
-import SwiftyJSON
 
 class SearchPartner:UIViewController{
-    let commentsRef = FIRDatabase.database().reference()
+    
     @IBOutlet var editEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,24 +17,13 @@ class SearchPartner:UIViewController{
     
     @IBAction func confirm(_ sender: Any) {
         
-//        var id:String?
-//        if let user = FIRAuth.auth()?.currentUser {
-//            id = user.uid
-//        }
+        let vc = storyboard?.instantiateViewController(withIdentifier: "Searching") as! Searching
+        vc.mail = editEmail.text!
+        navigationController?.pushViewController(vc, animated: false)
         
-        commentsRef.child("User").observe(.value, with: { (snapshot) -> Void in
-            let value = snapshot.value as! Dictionary<String,String>
-            print(value)
-        })
-        commentsRef.child("User").observe(.value, with: { (snapshot) in
-            if let value = snapshot.value{
-                let data = JSON(value)
-                print(data.arrayObject)
-            }
-        })
         
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "Searching") as! Searching
-//        navigationController?.pushViewController(vc, animated: false)
+        
+        
     }
     
     
