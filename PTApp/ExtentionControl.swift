@@ -122,8 +122,54 @@ extension String {
         
         return formatter.date(from: self)
     }
+}
+
+extension UIView {
     
+    func expand() {
+        self.transform = self.transform.scaledBy(x: 0.25, y: 0.25)
+        
+        UIView.animate(withDuration: 1.2,
+                       delay: 0.0,
+                       usingSpringWithDamping: 1.5,
+                       initialSpringVelocity: 0.1,
+                       options: UIViewAnimationOptions.curveEaseInOut,
+                       animations: ({
+                        self.transform = self.transform.scaledBy(x: 4.0, y: 4.0)
+                       }),
+                       completion: nil)
+    }
     
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.4
+        animation.values = [-15.0, 15.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
+    }
     
+    func dropDown() {
+        let fallDown1 = CABasicAnimation(keyPath: "transform.translation.y")
+        fallDown1.duration = 0.3
+        fallDown1.fromValue = -20
+        fallDown1.toValue = 10
+        
+        let goUp = CABasicAnimation(keyPath: "transform.translation.y")
+        goUp.duration = 0.3
+        goUp.fromValue = 10
+        goUp.toValue = -3
+        goUp.beginTime = fallDown1.beginTime + fallDown1.duration
+        
+        let fallDown2 = CABasicAnimation(keyPath: "transform.translation.y")
+        fallDown2.duration = 0.3
+        fallDown2.fromValue = -3
+        fallDown2.toValue = 0
+        fallDown2.beginTime = goUp.beginTime + goUp.duration
+        
+        let dropDownAnimationGroup = CAAnimationGroup()
+        dropDownAnimationGroup.animations = [fallDown1, goUp, fallDown2]
+        dropDownAnimationGroup.duration = fallDown2.beginTime + fallDown2.duration
+        layer.add(dropDownAnimationGroup, forKey: nil)
+    }
 }
 

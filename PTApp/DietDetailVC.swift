@@ -56,6 +56,7 @@ extension DietDetailVC {
             let y = i == 0 ? 0 : cell.stackComment.frame.height
             let commentView = CommentView(width: cell.stackComment.frame.width, y: y, name: "품파", desc: "가가가가가")
             cell.stackComment.addArrangedSubview(commentView)
+            cell.stackComment.sizeToFit()
         }
         print(cell.stackComment.arrangedSubviews)
         

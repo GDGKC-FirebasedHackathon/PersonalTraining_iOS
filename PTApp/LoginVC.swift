@@ -11,6 +11,18 @@ import UIKit
 class LoginVC: UIViewController, NetworkCallback{
     @IBOutlet var editID: UITextField!
     @IBOutlet var editPW: UITextField!
+    @IBOutlet var imgLogo: UIImageView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        imgLogo.expand()
+        imgLogo.shake()
+        editID.dropDown()
+        Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(pwdAnimation),userInfo: nil, repeats: false)
+    }
+    
+    func pwdAnimation() {
+        editPW.dropDown()
+    }
     
     @IBAction func loginBtn(_ sender: AnyObject) {
         let model = LoginModel(self)
