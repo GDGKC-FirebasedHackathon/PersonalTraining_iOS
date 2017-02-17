@@ -20,6 +20,7 @@
 		04ED6B0D1E57318A005008F6 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B0C1E57318A005008F6 /* SignupModel.swift */; };
 		04ED6B111E57362C005008F6 /* HomeworkVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B101E57362C005008F6 /* HomeworkVO.swift */; };
 		04ED6B131E573757005008F6 /* MotionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B121E573757005008F6 /* MotionVO.swift */; };
+		04ED6B161E573F61005008F6 /* GraphVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6B151E573F61005008F6 /* GraphVO.swift */; };
 		1BD4966B5204BA32413A1AF2 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B07AA82A16798153EAE517 /* Pods_PTApp.framework */; };
 		260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */; };
 		260F0C641E56CD8A00B02D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C621E56CD8A00B02D4C /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		265336581E5723EA001B32AF /* TrainingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265336571E5723EA001B32AF /* TrainingListVC.swift */; };
 		2653365A1E572401001B32AF /* TrainingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265336591E572401001B32AF /* TrainingDetailVC.swift */; };
 		2653365C1E5736AB001B32AF /* TrainingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653365B1E5736AB001B32AF /* TrainingListCell.swift */; };
+		2653365E1E574621001B32AF /* TrainingDetailWebviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653365D1E574621001B32AF /* TrainingDetailWebviewVC.swift */; };
 		2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685C8921E56F92000C78A8C /* DietDetailVC.swift */; };
 		26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */; };
 		6C52182C1E5722F50072325D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52182B1E5722F50072325D /* LineChartView.swift */; };
@@ -66,6 +68,7 @@
 		04ED6B0C1E57318A005008F6 /* SignupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		04ED6B101E57362C005008F6 /* HomeworkVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkVO.swift; sourceTree = "<group>"; };
 		04ED6B121E573757005008F6 /* MotionVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionVO.swift; sourceTree = "<group>"; };
+		04ED6B151E573F61005008F6 /* GraphVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVO.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C631E56CD8A00B02D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		265336571E5723EA001B32AF /* TrainingListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingListVC.swift; sourceTree = "<group>"; };
 		265336591E572401001B32AF /* TrainingDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingDetailVC.swift; sourceTree = "<group>"; };
 		2653365B1E5736AB001B32AF /* TrainingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingListCell.swift; sourceTree = "<group>"; };
+		2653365D1E574621001B32AF /* TrainingDetailWebviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingDetailWebviewVC.swift; sourceTree = "<group>"; };
 		2685C8921E56F92000C78A8C /* DietDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietDetailVC.swift; sourceTree = "<group>"; };
 		26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietListVC.swift; sourceTree = "<group>"; };
 		43293397F668F3E442293D36 /* Pods-PTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				04ED6B0F1E57361B005008F6 /* Training */,
 				04ED6B091E572FD4005008F6 /* User */,
 				04ED6B081E572FD1005008F6 /* Meal */,
+				04ED6B141E573F36005008F6 /* Graph */,
 			);
 			name = ValueObject;
 			sourceTree = "<group>";
@@ -171,6 +176,14 @@
 				04ED6B121E573757005008F6 /* MotionVO.swift */,
 			);
 			name = Training;
+			sourceTree = "<group>";
+		};
+		04ED6B141E573F36005008F6 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				04ED6B151E573F61005008F6 /* GraphVO.swift */,
+			);
+			name = Graph;
 			sourceTree = "<group>";
 		};
 		260F0C521E56CD8A00B02D4C = {
@@ -301,6 +314,7 @@
 				2653365B1E5736AB001B32AF /* TrainingListCell.swift */,
 				265336571E5723EA001B32AF /* TrainingListVC.swift */,
 				265336591E572401001B32AF /* TrainingDetailVC.swift */,
+				2653365D1E574621001B32AF /* TrainingDetailWebviewVC.swift */,
 			);
 			name = Training;
 			sourceTree = "<group>";
@@ -504,8 +518,10 @@
 				04ED6B031E572FCF005008F6 /* CustomerVO.swift in Sources */,
 				2653365C1E5736AB001B32AF /* TrainingListCell.swift in Sources */,
 				791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */,
+				2653365E1E574621001B32AF /* TrainingDetailWebviewVC.swift in Sources */,
 				04ED6B111E57362C005008F6 /* HomeworkVO.swift in Sources */,
 				04ED6B0D1E57318A005008F6 /* SignupModel.swift in Sources */,
+				04ED6B161E573F61005008F6 /* GraphVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
