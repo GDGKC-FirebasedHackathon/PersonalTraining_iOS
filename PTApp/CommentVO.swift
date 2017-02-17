@@ -10,7 +10,7 @@ import Foundation
 
 class CommentVO{
     
-    init(id:Int?, writer_id:String?,time:NSDate?,content:String?){
+    init(id:Int?, writer_id:String?,time:Date?,content:String?){
         self.id = id
         self.writer_id = writer_id
         self.time = time
@@ -19,6 +19,6 @@ class CommentVO{
     
     var id:Int?
     var writer_id:String?
-    var time:NSDate?
+    var time:Date?
     var content:String?
 }
