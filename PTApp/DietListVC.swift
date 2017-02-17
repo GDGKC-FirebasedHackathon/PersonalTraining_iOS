@@ -17,7 +17,7 @@ class DietListVC : UIViewController, NetworkCallback {
     override func viewDidLoad() {
         print("@@@@@@@@@", partnerID)
         let model = DietModel(self)
-        //loading(.start)
+        loading(.start)
         model.getDietList(uid: userID)
     }
     

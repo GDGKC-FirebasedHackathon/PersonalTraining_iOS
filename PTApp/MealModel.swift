@@ -20,7 +20,7 @@ class MealModel:NetworkModel{
         var strURL: String?
         let storage = FIRStorage.storage()
         let storageRef = storage.reference()
-        let mealImagesRef = storageRef.child("images/meal.jpg")
+        let mealImagesRef = storageRef.child("images/\(date.toString(format: "yyyy-MM-dd"))\(gino(meal.type)).jpg")
         print(imgData)
         let uploadTask = mealImagesRef.put(imgData, metadata: nil) { metadata, error in
             if (error != nil) {
@@ -28,7 +28,7 @@ class MealModel:NetworkModel{
             } else {
                 let downloadURL = metadata!.downloadURL()
                 strURL = downloadURL?.absoluteString
-                let tempDate = Calendar(identifier: .gregorian).date(byAdding: Calendar.Component.day, value: 1, to: date)!
+                let tempDate = Calendar(identifier: .gregorian).date(byAdding: Calendar.Component.day, value: -3, to: date)!
                 let strDate = tempDate.toString(format:"yyyy-MM-dd")
                 let dietRef = self.baseRef.child(id).child(strDate)
                 dietRef.setValue(["date": strDate])
