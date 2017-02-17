@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class LoginVC: UIViewController, NetworkCallback{
     @IBOutlet var editID: UITextField!
