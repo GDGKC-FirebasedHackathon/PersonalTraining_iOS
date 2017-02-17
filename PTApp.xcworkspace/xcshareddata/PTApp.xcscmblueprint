@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0D3016C2-6B01-4A7E-A59F-5FBE6355DCEE",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "E8BF02EE35D9AB71E00DFE5916DB1587A2F5FDC3" : "",
-    "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4" : "PTApp\/"
+    "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4" : "PersonalTraining_iOS\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "PTApp",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
