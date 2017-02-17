@@ -4,22 +4,51 @@ import QuartzCore
 
 class GraphVC: UIViewController, LineChartDelegate {
     
+    @IBOutlet var testLabel: UILabel!
+    var test : String?
+    
     var label = UILabel()
     // simple line with custom x axis labels
     let xLabels: [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", ""]
     
     var lineChart : LineChartView!
     
-    
     @IBAction func btnAddWeigth(_ sender: Any) {
     
-        
+        let customTransitionDelegate = CustomTrasitionDelegate(height: 420)
+        transitioningDelegate = customTransitionDelegate
+        let avc = storyboard!.instantiateViewController(withIdentifier: "PopUpWeightVC")
+        avc.modalPresentationStyle = .custom
+        avc.transitioningDelegate = customTransitionDelegate
+        present(avc, animated: true)
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initChartView()
+        
+        //        var delta: Int64 = 4 * Int64(NSEC_PER_SEC)
+        //        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
+        //
+        //        dispatch_after(time, dispatch_get_main_queue(), {
+        //            self.lineChart.clear()
+        //            self.lineChart.addLine(data2)
+        //        });
+        
+        //        var scale = LinearScale(domain: [0, 100], range: [0.0, 100.0])
+        //        var linear = scale.scale()
+        //        var invert = scale.invert()
+        //        println(linear(x: 2.5)) // 50
+        //        println(invert(x: 50)) // 2.5
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func initChartView(){
         
         var views: [String: AnyObject] = [:]
         
@@ -55,30 +84,7 @@ class GraphVC: UIViewController, LineChartDelegate {
         views["chart"] = lineChart
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[chart]-|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[label]-[chart(==200)]", options: [], metrics: nil, views: views))
-        
-        //        var delta: Int64 = 4 * Int64(NSEC_PER_SEC)
-        //        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
-        //
-        //        dispatch_after(time, dispatch_get_main_queue(), {
-        //            self.lineChart.clear()
-        //            self.lineChart.addLine(data2)
-        //        });
-        
-        //        var scale = LinearScale(domain: [0, 100], range: [0.0, 100.0])
-        //        var linear = scale.scale()
-        //        var invert = scale.invert()
-        //        println(linear(x: 2.5)) // 50
-        //        println(invert(x: 50)) // 2.5
-        
     }
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    
     
     /**
      * Line chart delegate method.
