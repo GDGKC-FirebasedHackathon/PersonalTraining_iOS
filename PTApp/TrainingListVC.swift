@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import Firebase
+import SwiftyJSON
 
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
-
     var userInfo = UserVO()
     var motionArray = [MotionVO]()
     var checkBoxArray = [CustomCheckBox]()
     var selectedArray = NSMutableArray()
     var selectable : Bool?
+    var dbRef : FIRDatabaseReference!
     
     let selectedImage = UIImage(named: "selected")
     let unselecedImage  = UIImage(named: "unselected")
-   
+    
     @IBOutlet weak var btnSelectMotion: UIBarButtonItem!
     @IBAction func btnSelect(_ sender: Any) {
         print("selectableChanged clicked!")
@@ -34,7 +36,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             for checkbox in checkBoxArray{
                 checkbox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
                 checkbox.isHidden = true
-                           }
+            }
             let customTransitionDelegate = CustomTrasitionDelegate(height: 420)
             transitioningDelegate = customTransitionDelegate
             
@@ -52,26 +54,42 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             self.btnSelectMotion.title = "선택"
             selectable = false
         }
-
+        
         
     }
- 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectable  = false
         userInfo.type = 0
         
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "2"))
-        motionArray.append(MotionVO(id: "3"))
-        motionArray.append(MotionVO(id: "4"))
-        motionArray.append(MotionVO(id: "5"))
-        motionArray.append(MotionVO(id: "6"))
-        motionArray.append(MotionVO(id: "7"))
-        motionArray.append(MotionVO(id: "8"))
-        motionArray.append(MotionVO(id: "9"))
-        motionArray.append(MotionVO(id: "10"))
+        dbRef = FIRDatabase.database().reference()
+
+        _ = dbRef.observe(.value,with: {
+            snapshot in
+            if let value = snapshot.value {
+                let data = JSON(value)
+                let array = data["Motions"].arrayValue
+                var tempList = [MotionVO]()
+                for item in array {
+                    let mvo = MotionVO(id: item["id"].int,
+                                       name: item["name"].string,
+                                       desc: item["desc"].string,
+                                       thumbnail_url: item["thumbnail_url"].string,
+                                       detail_url: item["detail_url"].string,
+                                       done: item["done"].int)
+                
+                    print("받아온 객체 출력\(mvo.name)")
+                    tempList.append(mvo)
+                }
+                  self.motionArray = tempList
+                
+            }
+      self.collectionView?.reloadData()
+        })
+        
+       
     }
     
     
@@ -88,7 +106,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         motionImgView.imageFromUrl(motionArray[indexPath.row].thumbnail_url, defaultImgPath: "")
         
         let motionCheckBox = cell.viewWithTag(3) as! CustomCheckBox
-        motionCheckBox.temp = gino(Int(gsno(motionArray[indexPath.row].id)))
+        motionCheckBox.temp = gino(motionArray[indexPath.row].id)
         motionCheckBox.addTarget(self, action: #selector(TrainingListVC.tickClicked(sender:)), for: .touchUpInside)
         
         checkBoxArray.append(motionCheckBox)
@@ -100,7 +118,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             motionCheckBox.isHidden = false
         }
         
-        if selectedArray.contains(gino(Int(gsno(motionArray[indexPath.row].id)))){
+        if selectedArray.contains(gino(motionArray[indexPath.row].id)){
             motionCheckBox.setBackgroundImage(selectedImage, for: UIControlState.normal)
         }else{
             motionCheckBox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
@@ -114,7 +132,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         return CGSize(width: collectionView.bounds.size.width/2-5, height: collectionView.bounds.size.width/2-5)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! TrainingDetailVC
         vc.selectedMotion = motionArray[indexPath.row]
         
