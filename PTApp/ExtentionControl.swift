@@ -69,3 +69,30 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+extension Date {
+    func toString(format: String?) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko-kr")
+        let strFormat = format == nil ? "yyyy년 MM월 dd일" : format
+        formatter.dateFormat = strFormat
+        
+        return formatter.string(from: self)
+    }
+}
+
+extension UIImageView {
+    
+    public func imageFromUrl(_ urlString: String?, defaultImgPath : String) {
+        let defaultImg = UIImage(named: defaultImgPath)
+        if let url = urlString {
+            if url.isEmpty {
+                self.image = defaultImg
+            } else {
+                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))], progressBlock: nil, completionHandler: nil)
+            }
+        } else {
+            self.image = defaultImg
+        }
+    }
+}

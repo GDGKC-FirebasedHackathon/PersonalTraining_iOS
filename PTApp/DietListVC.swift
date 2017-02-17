@@ -10,7 +10,7 @@ import UIKit
 
 class DietListVC : UITableViewController {
     
-    var dietList = [AnyObject]()
+    var dietList = [DietVO]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dietList.count
@@ -20,8 +20,8 @@ class DietListVC : UITableViewController {
         
         let diet = dietList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DietListCell") as! DietListCell
-//        cell.txtDate = diet.date
-//        cell.txtTitle = diet.title
+        cell.txtDate.text = diet.date?.toString(format: nil)
+        cell.imgDiet.imageFromUrl(diet.meals.last?.photo_url, defaultImgPath: "")
         
         return cell
     }

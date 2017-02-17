@@ -51,6 +51,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
   - GTMSessionFetcher/Full (1.1.7):
     - GTMSessionFetcher/Core (= 1.1.7)
+  - Kingfisher (3.2.4)
   - NVActivityIndicatorView (3.2)
 
 DEPENDENCIES:
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GoogleSignIn
+  - Kingfisher
   - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
@@ -74,8 +76,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   NVActivityIndicatorView: 28942c18ced111a6a3ce5e6f5b27d9d40116d639
 
-PODFILE CHECKSUM: 932293a7a54bb865973081ea57428eab4004a601
+PODFILE CHECKSUM: af02ee4ebc6de5b9825465703dc88689e3f3ba4f
 
 COCOAPODS: 1.1.0.rc.3

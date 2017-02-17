@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import NVActivityIndicatorView
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NVActivityIndicatorView.DEFAULT_TYPE = .pacman
         NVActivityIndicatorView.DEFAULT_COLOR = .blue
         NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(5.0)
+        
+        //Kingfisher 옵션 초기화
+        KingfisherManager.shared.cache.clearDiskCache()
+        KingfisherManager.shared.cache.clearMemoryCache()
+        let cache = KingfisherManager.shared.cache
+        cache.maxDiskCacheSize = UInt(50 * 1024 * 1024)
+        cache.maxCachePeriodInSecond = TimeInterval(60 * 60 * 24 * 3)
         
         return true
     }
