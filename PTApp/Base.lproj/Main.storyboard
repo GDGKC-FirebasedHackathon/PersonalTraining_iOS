@@ -193,8 +193,8 @@
                         <color key="selectedImageTintColor" red="0.14901960780000001" green="0.2274509804" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="CTn-Ms-cYg" kind="relationship" relationship="viewControllers" id="DQk-Dj-4cu"/>
                         <segue destination="0vQ-fb-tFO" kind="relationship" relationship="viewControllers" id="Mdk-BP-zyp"/>
+                        <segue destination="CTn-Ms-cYg" kind="relationship" relationship="viewControllers" id="DQk-Dj-4cu"/>
                         <segue destination="zta-Pq-ElM" kind="relationship" relationship="viewControllers" id="JCN-VH-6C7"/>
                         <segue destination="JJK-5T-wNT" kind="relationship" relationship="viewControllers" id="ujZ-qk-2zL"/>
                     </connections>
@@ -250,7 +250,7 @@
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z1E-Ut-nJo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z1E-Ut-nJo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
