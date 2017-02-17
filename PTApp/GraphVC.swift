@@ -59,7 +59,6 @@ class GraphVC: UIViewController, LineChartDelegate {
         recentWeight()
         initChartView()
     
-        
         dbRef = FIRDatabase.database().reference()
         
         _ = dbRef.observe(.value,with: {
@@ -72,19 +71,12 @@ class GraphVC: UIViewController, LineChartDelegate {
                 for item in array {
                     let wvo = WeightVO.init(weight: item["weight"].float,
                                             date: item["date"].string)
-                                                
-                        print(wvo.date)
-                        //tempList.append(wvo)
-                    
+                        tempList.append(wvo)
                 }
-//                self.motionArray = tempList
-                
+                self.weightlist = tempList
             }
             
         })
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
