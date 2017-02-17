@@ -11,7 +11,7 @@ import Firebase
 
 class SignupModel: NetworkModel {
     
-    func signup(email: String, pw: String){
+    func signup(email: String, pw: String,name:String,type:Int,phonenumber:String){
         FIRAuth.auth()?.createUser(withEmail: email, password: pw, completion: { (user, err) in
             if err == nil{
                 print(self.gsno(user?.email))

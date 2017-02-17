@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BoZ-vz-A0t">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BoZ-vz-A0t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -149,11 +149,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jP-06-wLK" customClass="RadioButton" customModule="PTApp" customModuleProvider="target">
+                                <rect key="frame" x="103" y="473" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="트레이너"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi9-3Y-1wO" customClass="RadioButton" customModule="PTApp" customModuleProvider="target">
+                                <rect key="frame" x="261" y="473" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="고객"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="m5R-aa-xIj"/>
                     <connections>
+                        <outlet property="btn_customer" destination="gi9-3Y-1wO" id="YRF-aM-272"/>
+                        <outlet property="btn_trainer" destination="5jP-06-wLK" id="1YV-0O-UHk"/>
                         <outlet property="editEmail" destination="9wK-Us-DAU" id="Flz-TH-www"/>
                         <outlet property="editName" destination="B6R-d8-L6y" id="NIN-a5-QYh"/>
                         <outlet property="editPW" destination="ic1-cJ-uoP" id="bW1-V9-D2S"/>
@@ -162,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLW-sl-FcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="494"/>
+            <point key="canvasLocation" x="-1204" y="493.40329835082463"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3XJ-gU-F8r">
@@ -231,7 +243,7 @@
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z1E-Ut-nJo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z1E-Ut-nJo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
