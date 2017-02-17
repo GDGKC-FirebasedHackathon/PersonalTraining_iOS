@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum MealType {
+    case breakfast
+    case lunch
+    case dinner
+}
+
 class DietDetailVC: UITableViewController {
     
     var dietID = 0
