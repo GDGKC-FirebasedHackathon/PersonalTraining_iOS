@@ -120,4 +120,12 @@ class RadioButtonsController : NSObject
         }
         return row
     }
+    
+    //원하는 index의 버튼 클릭
+    func selectRadioBtn(index: Int) {
+        for item in buttonsArray {
+            item.isChecked = false
+        }
+        buttonsArray[index].isChecked = true
+    }
 }

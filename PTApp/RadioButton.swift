@@ -23,7 +23,7 @@ class RadioButton: UIButton {
     /**
         Color of the radio button circle. Default value is UIColor red.
     */
-    @IBInspectable var circleColor: UIColor = UIColor.blue {
+    @IBInspectable var circleColor: UIColor = UIColor(hex: 0x00B0F0, alpha: 1) {
         didSet {
             circleLayer.strokeColor = circleColor.cgColor
             self.toggleButon()

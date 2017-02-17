@@ -32,7 +32,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
+    <true/>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>식단 작성에 사용됩니다.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
