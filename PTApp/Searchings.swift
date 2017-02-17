@@ -1,5 +1,5 @@
 //
-//  Searching.swift
+//  Searchings.swift
 //  PTApp
 //
 //  Created by OhKanghoon on 2017. 2. 18..
@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftyJSON
 
-class Searching:UIViewController{
+class Searchings: UIViewController{
     var mail:String = "" //상대방 메일
     let commentsRef = FIRDatabase.database().reference()
     override func viewDidLoad() {
