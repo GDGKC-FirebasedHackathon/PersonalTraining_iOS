@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftyJSON
 
+
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     var userInfo = UserVO()
     var motionArray = [MotionVO]()
