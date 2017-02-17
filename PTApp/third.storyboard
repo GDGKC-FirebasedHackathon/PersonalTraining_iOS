@@ -12,7 +12,7 @@
         <scene sceneID="q5F-lM-Wom">
             <objects>
                 <collectionViewController id="wUI-XB-dJh" customClass="TrainingListVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="epc-Bt-sRx">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="epc-Bt-sRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,17 +61,18 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="pCs-5a-GNu">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="wvd-w7-RLw">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fm7-Ih-TEp">
-                                <rect key="frame" x="317" y="7" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="  선택  "/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="선택" id="BUw-t6-BV6">
+                            <connections>
+                                <action selector="btnSelect:" destination="wUI-XB-dJh" id="6XC-R4-PNY"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="btnSelectMotion" destination="BUw-t6-BV6" id="AyN-g3-Xis"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOu-fd-kIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

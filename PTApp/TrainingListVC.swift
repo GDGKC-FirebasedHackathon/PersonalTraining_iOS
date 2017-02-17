@@ -8,16 +8,43 @@
 
 import UIKit
 
-class TrainingListVC: UICollectionViewController {
+class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
 
     var motionArray = [MotionVO]()
+    var checkBoxArray = [CustomCheckBox]()
     var selectedArray = NSMutableArray()
+    var selectable : Bool?
     
     let selectedImage = UIImage(named: "selected")
     let unselecedImage  = UIImage(named: "unselected")
    
+    @IBOutlet weak var btnSelectMotion: UIBarButtonItem!
+    @IBAction func btnSelect(_ sender: Any) {
+        print("selectableChanged clicked!")
+        
+        if(selectable == false){
+            for checkbox in checkBoxArray{
+                checkbox.isHidden = false
+            }
+            self.btnSelectMotion.title = "전송"
+            selectable = true
+        }
+        else if(selectable == true){
+            for checkbox in checkBoxArray{
+                checkbox.isHidden = true
+            }
+            self.btnSelectMotion.title = "선택"
+            selectable = false
+        }
+
+        
+    }
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectable  = false
+        
         motionArray.append(MotionVO(id: "1"))
         motionArray.append(MotionVO(id: "2"))
         motionArray.append(MotionVO(id: "3"))
@@ -28,7 +55,7 @@ class TrainingListVC: UICollectionViewController {
         motionArray.append(MotionVO(id: "8"))
         motionArray.append(MotionVO(id: "9"))
         motionArray.append(MotionVO(id: "10"))
-         }
+    }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,6 +74,15 @@ class TrainingListVC: UICollectionViewController {
         motionCheckBox.temp = gino(Int(gsno(motionArray[indexPath.row].id)))
         motionCheckBox.addTarget(self, action: #selector(TrainingListVC.tickClicked(sender:)), for: .touchUpInside)
         
+        checkBoxArray.append(motionCheckBox)
+        
+        if(selectable == false){
+            motionCheckBox.isHidden = true
+        }
+        else if(selectable == true){
+            motionCheckBox.isHidden = false
+        }
+        
         if selectedArray.contains(gino(Int(gsno(motionArray[indexPath.row].id)))){
             motionCheckBox.setBackgroundImage(selectedImage, for: UIControlState.normal)
         }else{
@@ -54,6 +90,11 @@ class TrainingListVC: UICollectionViewController {
         }
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width/2-5, height: collectionView.bounds.size.width/2-5)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
      
