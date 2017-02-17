@@ -47,6 +47,9 @@
 		791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC57E1E573B4D00709620 /* CustomAnimatedTransitioning.swift */; };
 		791FC5811E573B6600709620 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5801E573B6600709620 /* CustomPresentationController.swift */; };
 		791FC5831E573B9000709620 /* CustomTrasitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5821E573B9000709620 /* CustomTrasitionDelegate.swift */; };
+		791FC5871E5745A700709620 /* MealPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5861E5745A700709620 /* MealPostVC.swift */; };
+		791FC58A1E57475F00709620 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5881E57475F00709620 /* RadioButton.swift */; };
+		791FC58B1E57475F00709620 /* RadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5891E57475F00709620 /* RadioButtonsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,9 @@
 		791FC57E1E573B4D00709620 /* CustomAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		791FC5801E573B6600709620 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		791FC5821E573B9000709620 /* CustomTrasitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTrasitionDelegate.swift; sourceTree = "<group>"; };
+		791FC5861E5745A700709620 /* MealPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPostVC.swift; sourceTree = "<group>"; };
+		791FC5881E57475F00709620 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		791FC5891E57475F00709620 /* RadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonsController.swift; sourceTree = "<group>"; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +281,8 @@
 				791FC56D1E57201D00709620 /* CustomLoadingView.swift */,
 				791FC5731E5728D500709620 /* CustomView.swift */,
 				6C52182B1E5722F50072325D /* LineChartView.swift */,
+				791FC5881E57475F00709620 /* RadioButton.swift */,
+				791FC5891E57475F00709620 /* RadioButtonsController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */,
 				2685C8921E56F92000C78A8C /* DietDetailVC.swift */,
 				791FC5751E572FBF00709620 /* MealListCell.swift */,
+				791FC5861E5745A700709620 /* MealPostVC.swift */,
 			);
 			name = Diet;
 			sourceTree = "<group>";
@@ -463,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791FC58A1E57475F00709620 /* RadioButton.swift in Sources */,
 				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				791FC5761E572FBF00709620 /* MealListCell.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
@@ -475,7 +485,9 @@
 				04ED6ADF1E56F38C005008F6 /* SignUpVC.swift in Sources */,
 				04ED6B0B1E57300A005008F6 /* HomeworkModel.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
+				791FC58B1E57475F00709620 /* RadioButtonsController.swift in Sources */,
 				04ED6B131E573757005008F6 /* MotionVO.swift in Sources */,
+				791FC5871E5745A700709620 /* MealPostVC.swift in Sources */,
 				265336581E5723EA001B32AF /* TrainingListVC.swift in Sources */,
 				2653365A1E572401001B32AF /* TrainingDetailVC.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* LoginVC.swift in Sources */,
