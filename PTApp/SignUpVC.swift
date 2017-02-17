@@ -36,8 +36,7 @@ class SignUpVC: UIViewController,NetworkCallback,RadioButtonControllerDelegate {
     }
     func networkResult(resultData: Any, code: Int) {
         loading(.end)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchPartner") as! SearchPartner
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popViewController(animated: true)
     }
     func didSelectButton(_ aButton: RadioButton?) {
         if let t:String = aButton?.titleLabel?.text{

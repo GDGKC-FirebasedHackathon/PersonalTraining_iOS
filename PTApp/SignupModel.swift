@@ -20,8 +20,8 @@ class SignupModel: NetworkModel {
                     id = user.uid
                 }
                 print(id!)
-                let ref = FIRDatabase.database().reference().child("User").child(email)
-                ref.setValue(["uid":id,"name":name,"type":type,"phonenumber":phonenumber,"partner_id":""])
+                let ref = FIRDatabase.database().reference().child("User").child(id!)
+                ref.setValue(["email":email,"name":name,"type":type,"phonenumber":phonenumber])
                 self.view.networkResult(resultData: "", code: 0)
             }
             else{
