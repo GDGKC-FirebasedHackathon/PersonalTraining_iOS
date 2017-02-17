@@ -12,6 +12,20 @@ class DietListVC : UIViewController, UITableViewDelegate {
     
     var dietList = [DietVO]()
     
+    override func viewDidLoad() {
+//        let mvo = MealVO(meal_id: 0, type: MealType.breakfast.rawValue, photo_url: "", comment: [CommentVO]())
+//        let dvo = DietVO(id: userID, date: Date(), meals: <#T##[MealVO]#>, trainer_id: <#T##String?#>, customer_id: <#T##String?#>)
+//        dietList.append(<#T##newElement: Element##Element#>)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dietList.count
     }
@@ -32,6 +46,10 @@ class DietListVC : UIViewController, UITableViewDelegate {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DietDetailVC") as! DietDetailVC
         vc.dietID = gsno(diet.id)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func postMeal(_ sender: AnyObject) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
         navigationController?.pushViewController(vc, animated: true)
     }
     

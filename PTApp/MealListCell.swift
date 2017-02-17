@@ -14,4 +14,20 @@ class MealListCell: UITableViewCell {
     @IBOutlet var stackComment: UIStackView!
     @IBOutlet var editComment: UITextField!
     @IBOutlet var btnPost: UILabel!
+    
+    func setMealType(type: Int) {
+        var strType = ""
+        switch type {
+        case MealType.breakfast.rawValue:
+            strType = "아침"
+        case MealType.lunch.rawValue:
+            strType = "점심"
+        case MealType.dinner.rawValue:
+            strType = "저녁"
+        default:
+            strType = "간식"
+        }
+        txtMealType.text = strType
+    }
+
 }

@@ -11,8 +11,6 @@ import Firebase
 
 class LoginModel: NetworkModel {
     
-    
-    
     func login(email: String, pw: String) {
         FIRAuth.auth()?.signIn(withEmail: email, password: pw, completion: { (user, err) in
             if err == nil{
