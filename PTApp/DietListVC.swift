@@ -8,14 +8,17 @@
 
 import UIKit
 
-class DietListVC : UIViewController, UITableViewDelegate {
+class DietListVC : UIViewController, NetworkCallback {
+    
+    @IBOutlet var tableView: UITableView!
     
     var dietList = [DietVO]()
     
     override func viewDidLoad() {
-//        let mvo = MealVO(meal_id: 0, type: MealType.breakfast.rawValue, photo_url: "", comment: [CommentVO]())
-//        let dvo = DietVO(id: userID, date: Date(), meals: <#T##[MealVO]#>, trainer_id: <#T##String?#>, customer_id: <#T##String?#>)
-//        dietList.append(<#T##newElement: Element##Element#>)
+        print("@@@@@@@@@", partnerID)
+        let model = DietModel(self)
+        loading(.start)
+        model.getDietList(uid: userID)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +29,19 @@ class DietListVC : UIViewController, UITableViewDelegate {
         tabBarController?.tabBar.isHidden = true
     }
     
+    @IBAction func postMeal(_ sender: AnyObject) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func networkResult(resultData: Any, code: Int) {
+        loading(.end)
+        dietList = resultData as! [DietVO]
+        tableView.reloadData()
+    }
+}
+
+extension DietListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dietList.count
     }
@@ -35,7 +51,7 @@ class DietListVC : UIViewController, UITableViewDelegate {
         let diet = dietList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DietListCell") as! DietListCell
         cell.txtDate.text = diet.date?.toString(format: nil)
-        cell.imgDiet.imageFromUrl(diet.meals.last?.photo_url, defaultImgPath: "")
+        cell.imgDiet.imageFromUrl(diet.thumbnail, defaultImgPath: "")
         
         return cell
     }
@@ -48,9 +64,4 @@ class DietListVC : UIViewController, UITableViewDelegate {
         vc.dietID = gsno(diet.id)
         navigationController?.pushViewController(vc, animated: true)
     }
-    @IBAction func postMeal(_ sender: AnyObject) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
 }

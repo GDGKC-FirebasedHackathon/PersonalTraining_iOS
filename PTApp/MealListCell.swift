@@ -29,5 +29,4 @@ class MealListCell: UITableViewCell {
         }
         txtMealType.text = strType
     }
-
 }
