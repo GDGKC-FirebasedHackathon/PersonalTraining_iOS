@@ -22,6 +22,9 @@ class MealPostVC: UIViewController, NetworkCallback {
             rbController.addButton((view as! RadioButton))
         }
         rbController.selectRadioBtn(index: 3)
+        
+        let model = DietModel(self)
+        //model.getDietByDate(date: <#T##Date#>)
     }
     
     @IBAction func selectPic(_ sender: Any) {
@@ -31,6 +34,7 @@ class MealPostVC: UIViewController, NetworkCallback {
     }
     
     @IBAction func postMeal(_ sender: Any) {
+        
         let photo = UIImageJPEGRepresentation(imgMeal.image!, 0.6)!
         let mvo = MealVO(type: rbController.selectedRow, photo_url: nil, comment: [CommentVO]())
         
