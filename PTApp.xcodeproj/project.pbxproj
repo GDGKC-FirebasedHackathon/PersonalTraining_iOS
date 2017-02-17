@@ -17,6 +17,7 @@
 		260F0C731E56D83100B02D4C /* second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C721E56D83100B02D4C /* second.storyboard */; };
 		260F0C751E56D83D00B02D4C /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C741E56D83D00B02D4C /* third.storyboard */; };
 		260F0C771E56D84900B02D4C /* fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260F0C761E56D84900B02D4C /* fourth.storyboard */; };
+		262F6F8E1E56EE0E00090847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		260F0C721E56D83100B02D4C /* second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = second.storyboard; sourceTree = "<group>"; };
 		260F0C741E56D83D00B02D4C /* third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = third.storyboard; sourceTree = "<group>"; };
 		260F0C761E56D84900B02D4C /* fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = fourth.storyboard; sourceTree = "<group>"; };
+		262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		43293397F668F3E442293D36 /* Pods-PTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.debug.xcconfig"; sourceTree = "<group>"; };
 		70B07AA82A16798153EAE517 /* Pods_PTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				260F0C651E56CD8A00B02D4C /* Assets.xcassets */,
 				260F0C671E56CD8A00B02D4C /* LaunchScreen.storyboard */,
 				260F0C6A1E56CD8A00B02D4C /* Info.plist */,
+				262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */,
 			);
 			path = PTApp;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				260F0C751E56D83D00B02D4C /* third.storyboard in Resources */,
+				262F6F8E1E56EE0E00090847 /* GoogleService-Info.plist in Resources */,
 				260F0C691E56CD8A00B02D4C /* LaunchScreen.storyboard in Resources */,
 				260F0C661E56CD8A00B02D4C /* Assets.xcassets in Resources */,
 				260F0C771E56D84900B02D4C /* fourth.storyboard in Resources */,
@@ -395,6 +399,7 @@
 				260F0C6F1E56CD8A00B02D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
