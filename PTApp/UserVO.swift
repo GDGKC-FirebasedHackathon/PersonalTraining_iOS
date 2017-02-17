@@ -16,7 +16,7 @@ class UserVO {
         self.partner_id = partner_id
         
     }
-    
+    init(){}
     var id:String?
     var pw:String?
     var name:String?
