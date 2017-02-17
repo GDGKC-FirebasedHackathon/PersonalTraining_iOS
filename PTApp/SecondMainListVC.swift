@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondMain_ListVC : UITableViewController {
+class SecondMainListVC : UITableViewController {
 //    
 //    var pokemonList = [Pokemon]()
 //    

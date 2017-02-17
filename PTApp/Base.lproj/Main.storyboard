@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BoZ-vz-A0t">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BoZ-vz-A0t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <!--LoginVC-->
         <scene sceneID="ODP-6N-qco">
             <objects>
-                <viewController storyboardIdentifier="login_VC" id="w3m-UL-Nbs" customClass="login_VC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="w3m-UL-Nbs" customClass="LoginVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jiI-vw-nKv"/>
                         <viewControllerLayoutGuide type="bottom" id="VWq-9j-GaC"/>
@@ -20,12 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEs-zm-MlF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEs-zm-MlF">
                                 <rect key="frame" x="94" y="273" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfo-ez-sTk">
                                 <rect key="frame" x="94" y="311" width="186" height="30"/>
@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="login_btn:" destination="w3m-UL-Nbs" eventType="touchUpInside" id="DNV-bv-z4q"/>
+                                    <action selector="loginBtn:" destination="w3m-UL-Nbs" eventType="touchUpInside" id="n17-oJ-bUL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-64-VNj">
@@ -53,7 +53,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signup_btn:" destination="w3m-UL-Nbs" eventType="touchUpInside" id="cDX-dN-Xox"/>
+                                    <action selector="signupBtn:" destination="w3m-UL-Nbs" eventType="touchUpInside" id="FtT-3O-74O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,18 +61,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="7d9-kA-tHU"/>
                     <connections>
-                        <outlet property="id_tf" destination="IEs-zm-MlF" id="q42-HH-uLK"/>
-                        <outlet property="pw_tf" destination="zfo-ez-sTk" id="GnF-m7-VP6"/>
+                        <outlet property="editID" destination="IEs-zm-MlF" id="vkt-eF-xKv"/>
+                        <outlet property="editPW" destination="zfo-ez-sTk" id="blN-JJ-Bh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulu-Za-tuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1204" y="-212.74362818590706"/>
         </scene>
-        <!--SignupVC-->
+        <!--Sign UpVC-->
         <scene sceneID="GFX-0z-vvf">
             <objects>
-                <viewController storyboardIdentifier="signup_VC" id="S2S-J5-lhs" customClass="signup_VC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="S2S-J5-lhs" customClass="SignUpVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Nf-CE-if4"/>
                         <viewControllerLayoutGuide type="bottom" id="V7k-Ie-csa"/>
@@ -90,7 +90,7 @@
                                     <color key="titleColor" red="0.96928488660000001" green="1" blue="0.9947051321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUp:" destination="S2S-J5-lhs" eventType="touchUpInside" id="RQH-xA-wwj"/>
+                                    <action selector="signUp:" destination="S2S-J5-lhs" eventType="touchUpInside" id="ztA-oH-SkK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6R-d8-L6y">
@@ -98,28 +98,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호 입력 ex)01012341234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-1d-KDG">
                                 <rect key="frame" x="115" y="299" width="217" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-Us-DAU">
                                 <rect key="frame" x="115" y="337" width="217" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ic1-cJ-uoP">
                                 <rect key="frame" x="115" y="375" width="217" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olN-MS-1zq">
                                 <rect key="frame" x="51" y="266" width="56" height="21"/>
@@ -154,15 +154,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="m5R-aa-xIj"/>
                     <connections>
-                        <outlet property="email_tf" destination="9wK-Us-DAU" id="faK-Z7-6cc"/>
-                        <outlet property="name_tf" destination="B6R-d8-L6y" id="fQT-7V-kkg"/>
-                        <outlet property="pn_tf" destination="7qG-1d-KDG" id="cnr-Be-e8P"/>
-                        <outlet property="pw_tf" destination="ic1-cJ-uoP" id="ZVw-HB-UM3"/>
+                        <outlet property="editEmail" destination="9wK-Us-DAU" id="Flz-TH-www"/>
+                        <outlet property="editName" destination="B6R-d8-L6y" id="NIN-a5-QYh"/>
+                        <outlet property="editPW" destination="ic1-cJ-uoP" id="bW1-V9-D2S"/>
+                        <outlet property="editPhone" destination="7qG-1d-KDG" id="6m7-ti-IV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLW-sl-FcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2126" y="466"/>
+            <point key="canvasLocation" x="-1204" y="494"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3XJ-gU-F8r">
@@ -229,9 +229,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BoZ-vz-A0t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z1E-Ut-nJo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z1E-Ut-nJo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

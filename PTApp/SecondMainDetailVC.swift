@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondMain_DetailVC: UIViewController {
+class SecondMainDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
