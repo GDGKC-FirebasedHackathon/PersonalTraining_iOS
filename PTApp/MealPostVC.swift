@@ -22,6 +22,9 @@ class MealPostVC: UIViewController, NetworkCallback {
             rbController.addButton((view as! RadioButton))
         }
         rbController.selectRadioBtn(index: 3)
+        
+        let model = DietModel(self)
+        //model.getDietByDate(date: <#T##Date#>)
     }
     
     @IBAction func selectPic(_ sender: Any) {

@@ -111,3 +111,19 @@ extension UIImageView {
         }
     }
 }
+
+extension String {
+    
+    func toDate(format: String?) -> Date? {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko-kr")
+        let strFormat = format == nil ? "yyyy-MM-dd" : format
+        formatter.dateFormat = strFormat
+        
+        return formatter.date(from: self)
+    }
+    
+    
+    
+}
+

@@ -15,6 +15,14 @@ class DietVO{
         self.trainer_id = trainer_id
         self.customer_id = customer_id
     }
+    
+    init(date:Date?,meals:[MealVO],trainer_id:String?,customer_id:String?){
+        self.date = date
+        self.meals = meals
+        self.trainer_id = trainer_id
+        self.customer_id = customer_id
+    }
+    
     var id:String?
     var date:Date?
     var meals = [MealVO]()
