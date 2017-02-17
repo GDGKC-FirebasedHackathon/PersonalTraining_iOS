@@ -1,18 +1,18 @@
 //
-//  LoginModel.swift
+//  SignupModel.swift
 //  PTApp
 //
-//  Created by  noldam on 2017. 2. 17..
+//  Created by OhKanghoon on 2017. 2. 17..
 //  Copyright © 2017년 GDGKC-FirebasedHackathon. All rights reserved.
 //
 
 import Foundation
 import Firebase
 
-class LoginModel: NetworkModel {
+class SignupModel: NetworkModel {
     
-    func login(email: String, pw: String) {
-        FIRAuth.auth()?.signIn(withEmail: email, password: pw, completion: { (user, err) in
+    func signup(email: String, pw: String){
+        FIRAuth.auth()?.createUser(withEmail: email, password: pw, completion: { (user, err) in
             if err == nil{
                 print(self.gsno(user?.email))
                 self.view.networkResult(resultData: "", code: 0)
@@ -20,9 +20,8 @@ class LoginModel: NetworkModel {
             else{
                 self.view.networkFailed()
             }
+            
         })
-
     }
-    
     
 }

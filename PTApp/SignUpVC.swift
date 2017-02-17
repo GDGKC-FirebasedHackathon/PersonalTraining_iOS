@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Firebase
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController,NetworkCallback {
     
     @IBOutlet var editName: UITextField!
     @IBOutlet var editPhone: UITextField!
@@ -22,15 +21,12 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signUp(_ sender: AnyObject) {
-        FIRAuth.auth()?.createUser(withEmail: editEmail.text!, password: editPW.text!, completion: { (user, err) in
-            if err == nil{
-                print(self.gsno(user?.email))
-                let _ = self.navigationController?.popViewController(animated: true)
-            }
-            else{
-                self.simpleAlert(title: "회원가입 실패", msg:"\(err)")
-            }
-            
-        })
+        let model = SignupModel(self)
+        loading(.start)
+        model.signup(email: editEmail.text!, pw: editPW.text!)
+    }
+    func networkResult(resultData: Any, code: Int) {
+        loading(.end)
+        navigationController?.popViewController(animated: true)
     }
 }
