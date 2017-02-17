@@ -11,4 +11,9 @@ import Firebase
 
 class MealModel:NetworkModel{
     
+    
+    func add_meal(id:String,date:Date,meal:MealVO){
+        let ref = FIRDatabase.database().reference().child("Diet").child(id).child(date.toString(format:"yyyy'/'M'/'d'")).child("\(meal.meal_id)")
+        ref.setValue(["name":meal.type,"comment":meal.comment,"photo_url":meal.photo_url])
+    }
 }
