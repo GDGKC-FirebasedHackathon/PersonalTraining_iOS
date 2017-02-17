@@ -9,5 +9,9 @@
 import UIKit
 
 class MealListCell: UITableViewCell {
-    
+    @IBOutlet var txtMealType: UILabel!
+    @IBOutlet var imgMeal: UIImageView!
+    @IBOutlet var stackComment: UIStackView!
+    @IBOutlet var editComment: UITextField!
+    @IBOutlet var btnPost: UILabel!
 }

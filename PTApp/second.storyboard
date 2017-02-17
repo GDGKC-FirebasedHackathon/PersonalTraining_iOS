@@ -97,16 +97,16 @@
             </objects>
             <point key="canvasLocation" x="-973.60000000000002" y="227.13643178410797"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Diet DetailVC-->
         <scene sceneID="REn-LN-iHw">
             <objects>
-                <tableViewController id="BHq-jl-R8F" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DietDetailVC" id="BHq-jl-R8F" customClass="DietDetailVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="480" sectionHeaderHeight="28" sectionFooterHeight="28" id="00d-Bj-woj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SVG-zK-j3v">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealListCell" id="SVG-zK-j3v" customClass="MealListCell" customModule="PTApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SVG-zK-j3v" id="ucI-IA-Fub">
@@ -241,6 +241,13 @@
                                         <constraint firstItem="x9b-aB-ms1" firstAttribute="leading" secondItem="ucI-IA-Fub" secondAttribute="leadingMargin" constant="8" id="d5t-oq-mFC"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btnPost" destination="1G4-R2-YSm" id="m5j-cZ-JA1"/>
+                                    <outlet property="editComment" destination="tS6-if-KT4" id="EpY-sp-kbp"/>
+                                    <outlet property="imgMeal" destination="eEI-x7-hrg" id="dMA-fR-eLP"/>
+                                    <outlet property="stackComment" destination="CMm-Mg-UuV" id="of5-E3-Fhf"/>
+                                    <outlet property="txtMealType" destination="aRC-M2-zOs" id="dWT-4U-F4F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
