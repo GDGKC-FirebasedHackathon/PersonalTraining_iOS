@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g2n-Ml-ikq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g2n-Ml-ikq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <scene sceneID="q5F-lM-Wom">
             <objects>
                 <collectionViewController title="운동 목록" id="wUI-XB-dJh" customClass="TrainingListVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="epc-Bt-sRx">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="epc-Bt-sRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +60,7 @@
                             <outlet property="delegate" destination="wUI-XB-dJh" id="C4H-ig-LiC"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" image="dumbbell-for-training" id="thN-vL-ozz"/>
+                    <tabBarItem key="tabBarItem" title="운동" image="dumbbell-for-training" id="thN-vL-ozz"/>
                     <navigationItem key="navigationItem" title="운동 목록" id="pCs-5a-GNu">
                         <barButtonItem key="rightBarButtonItem" title="선택" id="BUw-t6-BV6">
                             <connections>
@@ -167,7 +167,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g2n-Ml-ikq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="트레이닝" id="4wA-O0-jGH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HHd-hN-KeX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HHd-hN-KeX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

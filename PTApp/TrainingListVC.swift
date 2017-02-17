@@ -59,6 +59,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loading(.start)
         selectable  = false
         userInfo.type = 0
         
