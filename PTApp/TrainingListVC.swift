@@ -23,8 +23,6 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     
     @IBOutlet weak var btnSelectMotion: UIBarButtonItem!
     @IBAction func btnSelect(_ sender: Any) {
-        print("selectableChanged clicked!")
-        
         if(selectable == false){ // 선택버튼 누르면
             for checkbox in checkBoxArray{
                 checkbox.isHidden = false
@@ -73,14 +71,12 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
                 let array = data["Motions"].arrayValue
                 var tempList = [MotionVO]()
                 for item in array {
-                    let mvo = MotionVO(id: item["id"].int,
+                    let mvo = MotionVO(id: item["id"].string,
                                        name: item["name"].string,
                                        desc: item["desc"].string,
                                        thumbnail_url: item["thumbnail_url"].string,
                                        detail_url: item["detail_url"].string,
                                        done: item["done"].int)
-                
-                    print("받아온 객체 출력\(mvo.name)")
                     tempList.append(mvo)
                 }
                   self.motionArray = tempList
@@ -106,7 +102,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         motionImgView.imageFromUrl(motionArray[indexPath.row].thumbnail_url, defaultImgPath: "")
         
         let motionCheckBox = cell.viewWithTag(3) as! CustomCheckBox
-        motionCheckBox.temp = gino(motionArray[indexPath.row].id)
+        motionCheckBox.temp = gino(Int(gsno(motionArray[indexPath.row].id)))
         motionCheckBox.addTarget(self, action: #selector(TrainingListVC.tickClicked(sender:)), for: .touchUpInside)
         
         checkBoxArray.append(motionCheckBox)
@@ -118,7 +114,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             motionCheckBox.isHidden = false
         }
         
-        if selectedArray.contains(gino(motionArray[indexPath.row].id)){
+        if selectedArray.contains(gino(Int(gsno(motionArray[indexPath.row].id)))){
             motionCheckBox.setBackgroundImage(selectedImage, for: UIControlState.normal)
         }else{
             motionCheckBox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
