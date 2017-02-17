@@ -15,6 +15,13 @@ class SignupModel: NetworkModel {
         FIRAuth.auth()?.createUser(withEmail: email, password: pw, completion: { (user, err) in
             if err == nil{
                 print(self.gsno(user?.email))
+                var id:String?
+                if let user = FIRAuth.auth()?.currentUser {
+                    id = user.uid
+                }
+                print(id!)
+                let ref = FIRDatabase.database().reference().child("User").child(id!)
+                ref.setValue(["email":email,"name":name,"type":type,"phonenumber":phonenumber])
                 self.view.networkResult(resultData: "", code: 0)
             }
             else{
