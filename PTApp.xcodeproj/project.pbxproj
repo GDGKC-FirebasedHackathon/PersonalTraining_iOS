@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04ED6ADF1E56F38C005008F6 /* signup_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6ADE1E56F38C005008F6 /* signup_VC.swift */; };
+		04ED6AE11E56F70A005008F6 /* login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6AE01E56F70A005008F6 /* login_VC.swift */; };
+		04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED6AE21E56F99E005008F6 /* ExtentionControl.swift */; };
 		1BD4966B5204BA32413A1AF2 /* Pods_PTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B07AA82A16798153EAE517 /* Pods_PTApp.framework */; };
 		260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */; };
 		260F0C611E56CD8A00B02D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260F0C601E56CD8A00B02D4C /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04ED6ADE1E56F38C005008F6 /* signup_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signup_VC.swift; sourceTree = "<group>"; };
+		04ED6AE01E56F70A005008F6 /* login_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = login_VC.swift; sourceTree = "<group>"; };
+		04ED6AE21E56F99E005008F6 /* ExtentionControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtentionControl.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C601E56CD8A00B02D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 				260F0C671E56CD8A00B02D4C /* LaunchScreen.storyboard */,
 				260F0C6A1E56CD8A00B02D4C /* Info.plist */,
 				262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */,
+				04ED6ADE1E56F38C005008F6 /* signup_VC.swift */,
+				04ED6AE01E56F70A005008F6 /* login_VC.swift */,
+				04ED6AE21E56F99E005008F6 /* ExtentionControl.swift */,
 			);
 			path = PTApp;
 			sourceTree = "<group>";
@@ -238,9 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				2685C8931E56F92000C78A8C /* SecondMain_DetailVC.swift in Sources */,
 				260F0C611E56CD8A00B02D4C /* ViewController.swift in Sources */,
 				26C7398C1E56F70A00BAF0B9 /* SecondMain_ListVC.swift in Sources */,
+				04ED6ADF1E56F38C005008F6 /* signup_VC.swift in Sources */,
+				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
+				04ED6AE11E56F70A005008F6 /* login_VC.swift in Sources */,
+
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
