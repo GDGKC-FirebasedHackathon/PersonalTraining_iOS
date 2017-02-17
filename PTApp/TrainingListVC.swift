@@ -17,7 +17,6 @@ class TrainingListVC: UICollectionViewController {
         super.viewDidLoad()
 
         Array = ["a","b","c","d"]
-        ButtonArray = ["a","b","c","d"]
         
          }
     
@@ -32,10 +31,14 @@ class TrainingListVC: UICollectionViewController {
         
         Label.text = Array[indexPath.row]
       
-        var Button = cell.viewWithTag(2) as! UIButton
-        
-        Button.setTitle(ButtonArray[indexPath.row], for: UIControlState.normal)
         
         return cell
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let diet = dietList[indexPath.row]
+//        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! DietDetailVC
+        //vc.dietID = diet.id
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
