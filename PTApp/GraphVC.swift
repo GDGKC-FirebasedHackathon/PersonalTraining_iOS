@@ -1,6 +1,8 @@
 
 import UIKit
 import QuartzCore
+import Firebase
+import SwiftyJSON
 
 class GraphVC: UIViewController, LineChartDelegate {
     
@@ -15,7 +17,7 @@ class GraphVC: UIViewController, LineChartDelegate {
     
     var xDateLabels : [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", ""]
     var yWeightLabels : [Float] = [10,20,30,40,50,10]
-    
+    var dbRef : FIRDatabaseReference!
     
     
     var lineChart : LineChartView!
@@ -56,20 +58,33 @@ class GraphVC: UIViewController, LineChartDelegate {
         initWeight()
         recentWeight()
         initChartView()
+    
         
-        //        var delta: Int64 = 4 * Int64(NSEC_PER_SEC)
-        //        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
-        //
-        //        dispatch_after(time, dispatch_get_main_queue(), {
-        //            self.lineChart.clear()
-        //            self.lineChart.addLine(data2)
-        //        });
+        dbRef = FIRDatabase.database().reference()
         
-        //        var scale = LinearScale(domain: [0, 100], range: [0.0, 100.0])
-        //        var linear = scale.scale()
-        //        var invert = scale.invert()
-        //        println(linear(x: 2.5)) // 50
-        //        println(invert(x: 50)) // 2.5
+        _ = dbRef.observe(.value,with: {
+            snapshot in
+            if let value = snapshot.value {
+                let data = JSON(value)
+                let array = data["Graph"].arrayValue
+                print(array)
+                var tempList = [WeightVO]()
+                for item in array {
+                    let wvo = WeightVO.init(weight: item["weight"].float,
+                                            date: item["date"].string)
+                                                
+                        print(wvo.date)
+                        //tempList.append(wvo)
+                    
+                }
+//                self.motionArray = tempList
+                
+            }
+            
+        })
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

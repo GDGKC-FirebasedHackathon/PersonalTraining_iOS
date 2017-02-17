@@ -40,7 +40,7 @@ class MealPostVC: UIViewController, NetworkCallback {
         
         let model = MealModel(self)
         loading(.start)
-        model.add_meal(id: "7igkgQtjVjRyFUPiWKzeqUWRhw22", date: Date(), meal: mvo, imgData: photo)
+        model.add_meal(id: userID, date: Date(), meal: mvo, imgData: photo)
     }
     
     func networkResult(resultData: Any, code: Int) {
