@@ -10,34 +10,33 @@ import UIKit
 
 class TrainingListVC: UICollectionViewController {
 
-    var Array = [String]()
-    var ButtonArray = [String]()
-    
+    var motionArray = [MotionVO]()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Array = ["a","b","c","d"]
         
          }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Array.count
+        return motionArray.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "motionCell", for: indexPath) as UICollectionViewCell
         
-        var Label = cell.viewWithTag(1) as! UILabel
+        var motionNameLabel = cell.viewWithTag(1) as! UILabel
+        motionNameLabel.text = motionArray[indexPath.row].name
         
-        Label.text = Array[indexPath.row]
-      
+        var motionImgView = cell.viewWithTag(2) as! UIImageView
+        motionImgView.imageFromUrl(motionArray[indexPath.row].thumbnail_url, defaultImgPath: "")
         
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let diet = dietList[indexPath.row]
-//        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! DietDetailVC
+     
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! TrainingDetailVC
+        
         //vc.dietID = diet.id
         navigationController?.pushViewController(vc, animated: true)
     }
