@@ -19,14 +19,30 @@
                     <view key="view" contentMode="scaleToFill" id="duX-R0-LsE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dob-Ki-iOV">
+                                <rect key="frame" x="299" y="540" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_add"/>
+                                <connections>
+                                    <action selector="btnAddWeigth:" destination="Ojc-lK-GS7" eventType="touchUpInside" id="e8h-r8-lSk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72649696386648377" green="0.89628796329023741" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="그래프" id="nmk-Ab-XTh"/>
+                    <tabBarItem key="tabBarItem" title="그래프" image="chart" id="nmk-Ab-XTh">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRF-hs-rxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="44"/>
+            <point key="canvasLocation" x="32.799999999999997" y="43.628185907046479"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart" width="32" height="32"/>
+        <image name="ic_add" width="45" height="46"/>
+    </resources>
 </document>

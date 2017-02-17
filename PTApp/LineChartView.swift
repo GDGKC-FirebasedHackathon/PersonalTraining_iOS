@@ -98,7 +98,7 @@ open class LineChartView: UIView {
     open var y: Coordinate = Coordinate()
     
     
-    // values calculated on init
+    // values calvculated on init
     fileprivate var drawingHeight: CGFloat = 0 {
         didSet {
             let max = getMaximumValue()
@@ -186,12 +186,12 @@ open class LineChartView: UIView {
         
         // draw grid
         if x.grid.visible && y.grid.visible {
-            //drawGrid()
+            drawGrid()
         }
         
         // draw axes
         if x.axis.visible && y.axis.visible {
-            //drawAxes()
+            drawAxes()
         }
         
         // draw labels
