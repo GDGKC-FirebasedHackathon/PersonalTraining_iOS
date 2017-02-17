@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
 
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
     var userInfo = UserVO()
@@ -64,21 +65,31 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         userInfo.type = 0
         
         dbRef = FIRDatabase.database().reference()
-        let dataFromFirebase = dbRef.child("Motions").observe(.value,with: { snapshot in print(snapshot.value)
+
+        _ = dbRef.observe(.value,with: {
+            snapshot in
+            if let value = snapshot.value {
+                let data = JSON(value)
+                let array = data["Motions"].arrayValue
+                var tempList = [MotionVO]()
+                for item in array {
+                    let mvo = MotionVO(id: item["id"].int,
+                                       name: item["name"].string,
+                                       desc: item["desc"].string,
+                                       thumbnail_url: item["thumbnail_url"].string,
+                                       detail_url: item["detail_url"].string,
+                                       done: item["done"].int)
+                
+                    print("받아온 객체 출력\(mvo.name)")
+                    tempList.append(mvo)
+                }
+                  self.motionArray = tempList
+                
+            }
+      self.collectionView?.reloadData()
         })
         
-        print("이야야야얍 \(dataFromFirebase)")
-        
-        motionArray.append(MotionVO(id: "1"))
-        motionArray.append(MotionVO(id: "2"))
-        motionArray.append(MotionVO(id: "3"))
-        motionArray.append(MotionVO(id: "4"))
-        motionArray.append(MotionVO(id: "5"))
-        motionArray.append(MotionVO(id: "6"))
-        motionArray.append(MotionVO(id: "7"))
-        motionArray.append(MotionVO(id: "8"))
-        motionArray.append(MotionVO(id: "9"))
-        motionArray.append(MotionVO(id: "10"))
+       
     }
     
     
@@ -95,7 +106,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         motionImgView.imageFromUrl(motionArray[indexPath.row].thumbnail_url, defaultImgPath: "")
         
         let motionCheckBox = cell.viewWithTag(3) as! CustomCheckBox
-        motionCheckBox.temp = gino(Int(gsno(motionArray[indexPath.row].id)))
+        motionCheckBox.temp = gino(motionArray[indexPath.row].id)
         motionCheckBox.addTarget(self, action: #selector(TrainingListVC.tickClicked(sender:)), for: .touchUpInside)
         
         checkBoxArray.append(motionCheckBox)
@@ -107,7 +118,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             motionCheckBox.isHidden = false
         }
         
-        if selectedArray.contains(gino(Int(gsno(motionArray[indexPath.row].id)))){
+        if selectedArray.contains(gino(motionArray[indexPath.row].id)){
             motionCheckBox.setBackgroundImage(selectedImage, for: UIControlState.normal)
         }else{
             motionCheckBox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
