@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4I-tw-115">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4I-tw-115">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Diet ListVC-->
+        <!--식단-->
         <scene sceneID="i06-hH-KC7">
             <objects>
                 <viewController storyboardIdentifier="DietListVC" id="Sdo-OY-bwo" customClass="DietListVC" customModule="PTApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,6 +93,7 @@
                             <constraint firstAttribute="trailing" secondItem="wSv-w3-I2K" secondAttribute="trailing" id="w7C-O7-fz9"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="식단" image="meal" id="DI4-Ua-UDa"/>
                     <navigationItem key="navigationItem" id="eOR-J7-vID"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -374,7 +375,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k4I-tw-115" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="식단" id="nVs-eo-MAN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wal-0w-297">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wal-0w-297">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -390,5 +391,6 @@
     </scenes>
     <resources>
         <image name="ic_add" width="45" height="46"/>
+        <image name="meal" width="32" height="32"/>
     </resources>
 </document>
