@@ -26,6 +26,9 @@
 		791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56B1E571F2000709620 /* NetworkCallback.swift */; };
 		791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56D1E57201D00709620 /* CustomLoadingView.swift */; };
 		791FC5701E5720A800709620 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC56F1E5720A800709620 /* LoginModel.swift */; };
+		791FC5721E57247300709620 /* DietListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5711E57247300709620 /* DietListCell.swift */; };
+		791FC5741E5728D500709620 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5731E5728D500709620 /* CustomView.swift */; };
+		791FC5761E572FBF00709620 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5751E572FBF00709620 /* MealListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		791FC56B1E571F2000709620 /* NetworkCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
 		791FC56D1E57201D00709620 /* CustomLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
 		791FC56F1E5720A800709620 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		791FC5711E57247300709620 /* DietListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietListCell.swift; sourceTree = "<group>"; };
+		791FC5731E5728D500709620 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		791FC5751E572FBF00709620 /* MealListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */,
-				260F0C651E56CD8A00B02D4C /* Assets.xcassets */,
 				260F0C6A1E56CD8A00B02D4C /* Info.plist */,
 				262F6F8D1E56EE0E00090847 /* GoogleService-Info.plist */,
 				791FC55F1E57170800709620 /* Utils */,
@@ -131,6 +136,7 @@
 		791FC55C1E57164C00709620 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				260F0C651E56CD8A00B02D4C /* Assets.xcassets */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				791FC56D1E57201D00709620 /* CustomLoadingView.swift */,
+				791FC5731E5728D500709620 /* CustomView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -201,8 +208,10 @@
 		791FC5661E571C8900709620 /* Diet */ = {
 			isa = PBXGroup;
 			children = (
+				791FC5711E57247300709620 /* DietListCell.swift */,
 				26C7398B1E56F70A00BAF0B9 /* DietListVC.swift */,
 				2685C8921E56F92000C78A8C /* DietDetailVC.swift */,
+				791FC5751E572FBF00709620 /* MealListCell.swift */,
 			);
 			name = Diet;
 			sourceTree = "<group>";
@@ -352,14 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791FC5761E572FBF00709620 /* MealListCell.swift in Sources */,
 				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
 				26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */,
 				04ED6ADF1E56F38C005008F6 /* SignUpVC.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* LoginVC.swift in Sources */,
+				791FC5721E57247300709620 /* DietListCell.swift in Sources */,
 				791FC5701E5720A800709620 /* LoginModel.swift in Sources */,
 				791FC56A1E571EF300709620 /* NetworkModel.swift in Sources */,
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
+				791FC5741E5728D500709620 /* CustomView.swift in Sources */,
 				791FC56E1E57201D00709620 /* CustomLoadingView.swift in Sources */,
 				791FC56C1E571F2000709620 /* NetworkCallback.swift in Sources */,
 			);
