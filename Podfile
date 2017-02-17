@@ -8,4 +8,6 @@ target 'PTApp' do
   # Pods for PTApp
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
 end
