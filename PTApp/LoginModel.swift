@@ -24,4 +24,5 @@ class LoginModel: NetworkModel {
 
     }
     
+    
 }
