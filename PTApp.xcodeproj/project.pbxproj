@@ -153,7 +153,7 @@
 				TargetAttributes = {
 					260F0C5A1E56CD8A00B02D4C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = N3NXYKN7VM;
+						DevelopmentTeam = RFXGE2J65W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -247,14 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				2685C8931E56F92000C78A8C /* SecondMain_DetailVC.swift in Sources */,
 				260F0C611E56CD8A00B02D4C /* ViewController.swift in Sources */,
 				26C7398C1E56F70A00BAF0B9 /* SecondMain_ListVC.swift in Sources */,
 				04ED6ADF1E56F38C005008F6 /* signup_VC.swift in Sources */,
 				04ED6AE31E56F99E005008F6 /* ExtentionControl.swift in Sources */,
 				04ED6AE11E56F70A005008F6 /* login_VC.swift in Sources */,
-
 				260F0C5F1E56CD8A00B02D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +375,7 @@
 			baseConfigurationReference = 43293397F668F3E442293D36 /* Pods-PTApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N3NXYKN7VM;
+				DEVELOPMENT_TEAM = RFXGE2J65W;
 				INFOPLIST_FILE = PTApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -392,7 +390,7 @@
 			baseConfigurationReference = CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N3NXYKN7VM;
+				DEVELOPMENT_TEAM = RFXGE2J65W;
 				INFOPLIST_FILE = PTApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
