@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E8BF02EE35D9AB71E00DFE5916DB1587A2F5FDC3" : 9223372036854775807,
+    "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "410A90D8-4F17-49E9-8661-4B2D92E29A8D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E8BF02EE35D9AB71E00DFE5916DB1587A2F5FDC3" : "",
+    "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4" : "PTApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PTApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PTApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GDGKC-FirebasedHackathon\/PersonalTraining_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2089F30D1AE30E8BC8FBB6DF5DDAAB1AA331DBA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jungin641\/2016_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E8BF02EE35D9AB71E00DFE5916DB1587A2F5FDC3"
+    }
+  ]
+}
