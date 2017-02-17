@@ -10,6 +10,7 @@ import UIKit
 
 class TrainingListCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgMotion: UIImageView!
+    @IBOutlet weak var txtMotionName: UILabel!
    
-
 }

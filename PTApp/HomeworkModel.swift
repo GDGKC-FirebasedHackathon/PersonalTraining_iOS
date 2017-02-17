@@ -10,5 +10,10 @@ import Foundation
 import Firebase
 
 class HomeworkModel: NetworkModel{
+    let ref = FIRDatabase.database().reference()
     
+    func add_Homework(hw:HomeworkVO){
+        
+    }
+
 }

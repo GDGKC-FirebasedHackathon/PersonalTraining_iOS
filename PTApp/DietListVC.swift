@@ -8,15 +8,15 @@
 
 import UIKit
 
-class DietListVC : UITableViewController {
+class DietListVC : UIViewController, UITableViewDelegate {
     
     var dietList = [DietVO]()
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dietList.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let diet = dietList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DietListCell") as! DietListCell
@@ -26,7 +26,7 @@ class DietListVC : UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let diet = dietList[indexPath.row]
         
