@@ -9,22 +9,23 @@
 import UIKit
 import Firebase
 
-class signup_VC: UIViewController{
+class SignUpVC: UIViewController {
     
-    @IBOutlet var name_tf: UITextField!
-    @IBOutlet var pn_tf: UITextField!
-    @IBOutlet var email_tf: UITextField!
-    @IBOutlet var pw_tf: UITextField!
+    @IBOutlet var editName: UITextField!
+    @IBOutlet var editPhone: UITextField!
+    @IBOutlet var editEmail: UITextField!
+    @IBOutlet var editPW: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
     }
     
-    @IBAction func signUp(_ sender: Any) {
-        FIRAuth.auth()?.createUser(withEmail: email_tf.text!, password: pw_tf.text!, completion: { (user, err) in
+    @IBAction func signUp(_ sender: AnyObject) {
+        FIRAuth.auth()?.createUser(withEmail: editEmail.text!, password: editPW.text!, completion: { (user, err) in
             if err == nil{
                 print(self.gsno(user?.email))
-                self.navigationController?.popViewController(animated: true)
+                let _ = self.navigationController?.popViewController(animated: true)
             }
             else{
                 self.simpleAlert(title: "회원가입 실패", msg:"\(err)")
