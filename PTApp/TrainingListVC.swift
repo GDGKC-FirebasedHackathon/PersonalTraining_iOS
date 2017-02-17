@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLayout{
-
     var userInfo = UserVO()
     var motionArray = [MotionVO]()
     var checkBoxArray = [CustomCheckBox]()
     var selectedArray = NSMutableArray()
     var selectable : Bool?
+    var dbRef : FIRDatabaseReference!
     
     let selectedImage = UIImage(named: "selected")
     let unselecedImage  = UIImage(named: "unselected")
-   
+    
     @IBOutlet weak var btnSelectMotion: UIBarButtonItem!
     @IBAction func btnSelect(_ sender: Any) {
         print("selectableChanged clicked!")
@@ -34,7 +35,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             for checkbox in checkBoxArray{
                 checkbox.setBackgroundImage(unselecedImage, for: UIControlState.normal)
                 checkbox.isHidden = true
-                           }
+            }
             let customTransitionDelegate = CustomTrasitionDelegate(height: 420)
             transitioningDelegate = customTransitionDelegate
             
@@ -52,15 +53,21 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
             self.btnSelectMotion.title = "선택"
             selectable = false
         }
-
+        
         
     }
- 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectable  = false
         userInfo.type = 0
+        
+        dbRef = FIRDatabase.database().reference()
+        let dataFromFirebase = dbRef.child("Motions").observe(.value,with: { snapshot in print(snapshot.value)
+        })
+        
+        print("이야야야얍 \(dataFromFirebase)")
         
         motionArray.append(MotionVO(id: "1"))
         motionArray.append(MotionVO(id: "2"))
@@ -114,7 +121,7 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
         return CGSize(width: collectionView.bounds.size.width/2-5, height: collectionView.bounds.size.width/2-5)
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "TrainingDetailVC") as! TrainingDetailVC
         vc.selectedMotion = motionArray[indexPath.row]
         
