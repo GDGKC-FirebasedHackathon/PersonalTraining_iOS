@@ -78,8 +78,8 @@
 		04ED6B121E573757005008F6 /* MotionVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionVO.swift; sourceTree = "<group>"; };
 		04ED6B151E573F61005008F6 /* GraphVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVO.swift; sourceTree = "<group>"; };
 		04ED6B191E575552005008F6 /* MealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
-		04ED6B231E57B9B4005008F6 /* SearchPartner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchPartner.swift; path = ../../Downloads/PersonalTraining_iOS/SearchPartner.swift; sourceTree = "<group>"; };
-		04ED6B241E57B9B4005008F6 /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Searching.swift; path = ../../Downloads/PersonalTraining_iOS/Searching.swift; sourceTree = "<group>"; };
+		04ED6B231E57B9B4005008F6 /* SearchPartner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPartner.swift; sourceTree = "<group>"; };
+		04ED6B241E57B9B4005008F6 /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Searching.swift; sourceTree = "<group>"; };
 		260F0C5B1E56CD8A00B02D4C /* PTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260F0C5E1E56CD8A00B02D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260F0C631E56CD8A00B02D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
