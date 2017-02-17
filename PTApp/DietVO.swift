@@ -8,6 +8,11 @@
 import Foundation
 class DietVO{
     
+    init(date:Date?, thumbnail:String?){
+        self.date = date
+        self.thumbnail = thumbnail
+    }
+    
     init(id:String?, date:Date?,meals:[MealVO],trainer_id:String?,customer_id:String?){
         self.id = id
         self.date = date
@@ -25,6 +30,7 @@ class DietVO{
     
     var id:String?
     var date:Date?
+    var thumbnail:String?
     var meals = [MealVO]()
     var trainer_id:String?
     var customer_id:String?

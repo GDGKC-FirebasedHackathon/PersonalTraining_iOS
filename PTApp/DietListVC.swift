@@ -10,6 +10,8 @@ import UIKit
 
 class DietListVC : UIViewController, NetworkCallback {
     
+    @IBOutlet var tableView: UITableView!
+    
     var dietList = [DietVO]()
     
     override func viewDidLoad() {
@@ -34,6 +36,8 @@ class DietListVC : UIViewController, NetworkCallback {
     
     func networkResult(resultData: Any, code: Int) {
         loading(.end)
+        dietList = resultData as! [DietVO]
+        tableView.reloadData()
     }
 }
 
@@ -47,7 +51,7 @@ extension DietListVC: UITableViewDelegate, UITableViewDataSource {
         let diet = dietList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DietListCell") as! DietListCell
         cell.txtDate.text = diet.date?.toString(format: nil)
-        cell.imgDiet.imageFromUrl(diet.meals.last?.photo_url, defaultImgPath: "")
+        cell.imgDiet.imageFromUrl(diet.thumbnail, defaultImgPath: "")
         
         return cell
     }
