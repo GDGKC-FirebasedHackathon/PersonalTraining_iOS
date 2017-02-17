@@ -23,8 +23,6 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
     
     @IBOutlet weak var btnSelectMotion: UIBarButtonItem!
     @IBAction func btnSelect(_ sender: Any) {
-        print("selectableChanged clicked!")
-        
         if(selectable == false){ // 선택버튼 누르면
             for checkbox in checkBoxArray{
                 checkbox.isHidden = false
@@ -79,8 +77,6 @@ class TrainingListVC: UICollectionViewController ,UICollectionViewDelegateFlowLa
                                        thumbnail_url: item["thumbnail_url"].string,
                                        detail_url: item["detail_url"].string,
                                        done: item["done"].int)
-                
-                    print("받아온 객체 출력\(mvo.id)")
                     tempList.append(mvo)
                 }
                   self.motionArray = tempList
