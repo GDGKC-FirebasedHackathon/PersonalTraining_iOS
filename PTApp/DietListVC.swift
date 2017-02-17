@@ -25,9 +25,12 @@ class DietListVC : UIViewController, NetworkCallback {
         tabBarController?.tabBar.isHidden = false
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     @IBAction func postMeal(_ sender: AnyObject) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MealPostVC") as! MealPostVC
-        tabBarController?.tabBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -58,8 +61,7 @@ extension DietListVC: UITableViewDelegate, UITableViewDataSource {
         let diet = dietList[indexPath.row]
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DietDetailVC") as! DietDetailVC
-        vc.dietDate = diet.date!
-        tabBarController?.tabBar.isHidden = true
+        vc.dietID = gsno(diet.id)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -15,27 +15,15 @@ enum MealType: Int {
     case snack = 3
 }
 
-class DietDetailVC: UITableViewController, NetworkCallback {
+class DietDetailVC: UITableViewController {
     
-    var dietDate = Date()
+    var dietID = ""
     var mealList = [MealVO]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let model = MealModel(self)
-        loading(.start)
-        model.getMealList(id: userID, date: dietDate)
 
     }
-    
-    func networkResult(resultData: Any, code: Int) {
-        
-    }
-  
-}
-
-extension DietDetailVC {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -45,8 +33,8 @@ extension DietDetailVC {
         //let meal = mealList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealListCell") as! MealListCell
         
-        //        cell.imgMeal.imageFromUrl(meal.photo_url, defaultImgPath: "")
-        //        cell.setMealType(type: gino(meal.type))
+//        cell.imgMeal.imageFromUrl(meal.photo_url, defaultImgPath: "")
+//        cell.setMealType(type: gino(meal.type))
         
         for i in 0..<3 {
             let y = i == 0 ? 0 : cell.stackComment.frame.height
@@ -58,4 +46,9 @@ extension DietDetailVC {
         
         return cell
     }
+    
+    func sls() {
+        
+    }
+  
 }
