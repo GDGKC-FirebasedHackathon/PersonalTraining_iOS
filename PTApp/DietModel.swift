@@ -20,15 +20,20 @@ class DietModel: NetworkModel {
         ref.observe(.value, with: { snapshot in
             if let value = snapshot.value {
                 let data = JSON(value)
+                print(data)
                 var dvoList = [DietVO]()
                 if let dic = data.dictionary {
                     for item in dic {
                         if let mvoDic = item.value.dictionary {
                             for mvoItem in mvoDic {
-                                let dvo = DietVO(date: item.key.toDate(format: nil), thumbnail: mvoItem.value["photo_url"].string)
-                                dvoList.append(dvo)
-                                //let mvo = MealVO(meal_id: item.key, type: item.value["type"].string, photo_url: item.value["photo_url"].string)
-                                break
+                                if mvoItem.key != "date" {
+                                    let dvo = DietVO(date: item.key.toDate(format: nil), thumbnail: mvoItem.value["photo_url"].string)
+                                    
+                                    dvoList.append(dvo)
+                                    //let mvo = MealVO(meal_id: item.key, type: item.value["type"].string, photo_url: item.value["photo_url"].string)
+                                    break
+                                }
+                                
                             }
                         }
                     }
