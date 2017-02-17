@@ -52,6 +52,7 @@
 		791FC5871E5745A700709620 /* MealPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5861E5745A700709620 /* MealPostVC.swift */; };
 		791FC58A1E57475F00709620 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5881E57475F00709620 /* RadioButton.swift */; };
 		791FC58B1E57475F00709620 /* RadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC5891E57475F00709620 /* RadioButtonsController.swift */; };
+		791FC58D1E575E6600709620 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791FC58C1E575E6600709620 /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		791FC5861E5745A700709620 /* MealPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPostVC.swift; sourceTree = "<group>"; };
 		791FC5881E57475F00709620 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		791FC5891E57475F00709620 /* RadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonsController.swift; sourceTree = "<group>"; };
+		791FC58C1E575E6600709620 /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		CF8C40E808508B2D64C08743 /* Pods-PTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PTApp/Pods-PTApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,6 +298,7 @@
 				6C52182B1E5722F50072325D /* LineChartView.swift */,
 				791FC5881E57475F00709620 /* RadioButton.swift */,
 				791FC5891E57475F00709620 /* RadioButtonsController.swift */,
+				791FC58C1E575E6600709620 /* CommentView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				791FC57F1E573B4D00709620 /* CustomAnimatedTransitioning.swift in Sources */,
 				791FC5761E572FBF00709620 /* MealListCell.swift in Sources */,
 				04ED6B061E572FCF005008F6 /* TrainerVO.swift in Sources */,
+				791FC58D1E575E6600709620 /* CommentView.swift in Sources */,
 				2685C8931E56F92000C78A8C /* DietDetailVC.swift in Sources */,
 				04ED6B071E572FCF005008F6 /* UserVO.swift in Sources */,
 				26C7398C1E56F70A00BAF0B9 /* DietListVC.swift in Sources */,
