@@ -10,4 +10,5 @@ target 'PTApp' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+    pod 'NVActivityIndicatorView'
 end
