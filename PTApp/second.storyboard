@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Sdo-OY-bwo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Sdo-OY-bwo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,31 +41,21 @@
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFx-KU-MYu">
-                                                    <rect key="frame" x="8" y="98" width="359" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pri-ex-cVz">
-                                                    <rect key="frame" x="8" y="120" width="359" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <rect key="frame" x="167" y="114.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="HiZ-7l-4gO" firstAttribute="leading" secondItem="Sus-Xv-HK8" secondAttribute="leading" id="4dC-GZ-93F"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="Pri-ex-cVz" secondAttribute="leading" id="6IM-jK-Qku"/>
                                                 <constraint firstAttribute="trailing" secondItem="TNY-3n-pRE" secondAttribute="trailing" id="8L5-PJ-SK8"/>
                                                 <constraint firstItem="TNY-3n-pRE" firstAttribute="leading" secondItem="Sus-Xv-HK8" secondAttribute="leading" id="D7V-dk-F2e"/>
                                                 <constraint firstAttribute="bottom" secondItem="TNY-3n-pRE" secondAttribute="bottom" id="EDJ-sX-Cwa"/>
-                                                <constraint firstItem="UFx-KU-MYu" firstAttribute="leading" secondItem="Pri-ex-cVz" secondAttribute="leading" id="IOg-12-7ph"/>
-                                                <constraint firstItem="Pri-ex-cVz" firstAttribute="centerY" secondItem="Sus-Xv-HK8" secondAttribute="centerY" constant="10" id="Smo-1B-LSD"/>
+                                                <constraint firstItem="UFx-KU-MYu" firstAttribute="centerY" secondItem="HiZ-7l-4gO" secondAttribute="centerY" id="OKa-TF-JDC"/>
                                                 <constraint firstItem="HiZ-7l-4gO" firstAttribute="top" secondItem="Sus-Xv-HK8" secondAttribute="top" id="TIh-ry-hzP"/>
                                                 <constraint firstAttribute="bottom" secondItem="HiZ-7l-4gO" secondAttribute="bottom" id="Xg1-i0-y96"/>
-                                                <constraint firstItem="UFx-KU-MYu" firstAttribute="trailing" secondItem="Pri-ex-cVz" secondAttribute="trailing" id="b2V-hA-n7l"/>
-                                                <constraint firstItem="Pri-ex-cVz" firstAttribute="top" secondItem="UFx-KU-MYu" secondAttribute="bottom" constant="5" id="hQp-nu-fCZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Pri-ex-cVz" secondAttribute="trailing" id="n0V-E1-wkJ"/>
+                                                <constraint firstItem="UFx-KU-MYu" firstAttribute="centerX" secondItem="HiZ-7l-4gO" secondAttribute="centerX" id="jnw-69-znL"/>
                                                 <constraint firstAttribute="trailing" secondItem="HiZ-7l-4gO" secondAttribute="trailing" id="or5-x0-fCl"/>
                                                 <constraint firstItem="TNY-3n-pRE" firstAttribute="top" secondItem="Sus-Xv-HK8" secondAttribute="top" id="r11-Vh-ZkI"/>
                                             </constraints>
@@ -74,7 +64,6 @@
                                             <outlet property="imgDiet" destination="TNY-3n-pRE" id="7YI-fp-3Jv"/>
                                             <outlet property="imgPlay" destination="TNY-3n-pRE" id="GwO-2a-8Pb"/>
                                             <outlet property="txtDate" destination="UFx-KU-MYu" id="SMH-YT-VpO"/>
-                                            <outlet property="txtTitle" destination="Pri-ex-cVz" id="Y7Q-va-zBu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

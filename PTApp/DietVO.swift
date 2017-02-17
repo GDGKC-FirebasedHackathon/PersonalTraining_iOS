@@ -8,7 +8,7 @@
 import Foundation
 class DietVO{
     
-    init(id:String?, date:NSDate?,meals:[MealVO],trainer_id:String?,customer_id:String?){
+    init(id:String?, date:Date?,meals:[MealVO],trainer_id:String?,customer_id:String?){
         self.id = id
         self.date = date
         self.meals = meals
@@ -16,7 +16,7 @@ class DietVO{
         self.customer_id = customer_id
     }
     var id:String?
-    var date:NSDate?
+    var date:Date?
     var meals = [MealVO]()
     var trainer_id:String?
     var customer_id:String?

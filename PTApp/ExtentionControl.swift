@@ -69,3 +69,14 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+extension Date {
+    func toString(format: String?) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko-kr")
+        let strFormat = format == nil ? "yyyy년 MM월 dd일" : format
+        formatter.dateFormat = strFormat
+        
+        return formatter.string(from: self)
+    }
+}

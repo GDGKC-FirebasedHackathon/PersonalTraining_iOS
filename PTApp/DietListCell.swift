@@ -12,6 +12,5 @@ class DietListCell: UITableViewCell {
     
     @IBOutlet var imgDiet: UIImageView!
     @IBOutlet var txtDate: UILabel!
-    @IBOutlet var txtTitle: UILabel!
     
 }
