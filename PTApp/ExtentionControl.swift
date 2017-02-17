@@ -25,7 +25,7 @@ extension UIViewController{
     }
     
     var partnerID: String {
-        return UserDefaults.standard.string(forKey: "partnerID")
+        return UserDefaults.standard.string(forKey: "partnerID")!
     }
     
     func simpleAlert(title: String, msg: String) {
