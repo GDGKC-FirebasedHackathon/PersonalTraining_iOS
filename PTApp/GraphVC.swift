@@ -12,10 +12,8 @@ class GraphVC: UIViewController, LineChartDelegate {
     var test : String?
     var weightlist = [WeightVO]()
     var label = UILabel()
-    // simple line with custom x axis labels
-    let xLabels: [String] = ["첫째", "둘째", "셋째", "넷째", "다섯째", ""]
     
-    var xDateLabels : [String] = ["첫째주", "둘째주", "셋째주", "넷째주", "다섯째주", ""]
+    var xDateLabels : [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", "다섯째주"]
     var yWeightLabels : [Float] = [10,20,30,40,50,10]
     var dbRef : FIRDatabaseReference!
     
@@ -99,7 +97,8 @@ class GraphVC: UIViewController, LineChartDelegate {
         
         var views: [String: AnyObject] = [:]
         
-        label.text = "기본 몸무게를 띄워둘까봐"
+        label.text = "몸무게를 클릭해보세요!"
+        label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         self.view.addSubview(label)
@@ -139,7 +138,7 @@ class GraphVC: UIViewController, LineChartDelegate {
      */
     func didSelectDataPoint(_ x: CGFloat, yValues: Array<CGFloat>) {
         
-        label.text = "\(xDateLabels[Int(x)])의 몸무게는 \(yValues)kg이지롱"
+        label.text = "\(xDateLabels)의 몸무게는 \(yValues)kg 입니다."
     }
     
     
