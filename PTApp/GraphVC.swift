@@ -6,15 +6,15 @@ import SwiftyJSON
 
 class GraphVC: UIViewController, LineChartDelegate {
     
-    @IBOutlet var txtWeight: UILabel!
-    @IBOutlet var txtDate: UILabel!
+    var txtWeight: String?
+    var txtDate: String?
     
     var test : String?
     var weightlist = [WeightVO]()
     var label = UILabel()
     
-    var xDateLabels : [String] = ["", "첫째주", "둘째주", "셋째주", "넷째주", "다섯째주"]
-    var yWeightLabels : [Float] = [10,20,30,40,50,10]
+    var xDateLabels = [String]()
+    var yWeightLabels = [Float]()
     var dbRef : FIRDatabaseReference!
     
     
@@ -34,10 +34,17 @@ class GraphVC: UIViewController, LineChartDelegate {
     
     //weightlist에 여러 데이터가 쌓이면, 최신 5개의 데이터만 가져온다.
     //weight와, date에는 최대 5개.
+    
+    func initXaxis(list: [WeightVO]) {
+        for item in list {
+            xDateLabels.append(gsno(item.date))
+            yWeightLabels.append(item.weight!)
+        }
+    }
+    
+    
     func recentWeight(wvo: WeightVO){
-        let list = weightlist
-        let count = list.count
-        
+ 
         xDateLabels.append(wvo.date!)
         yWeightLabels.append(wvo.weight!)
         xDateLabels.remove(at: 0)
@@ -73,6 +80,7 @@ class GraphVC: UIViewController, LineChartDelegate {
                         tempList.append(wvo)
                 }
                 self.weightlist = tempList
+                self.initXaxis(list: tempList)
                 self.initChartView()
                 self.refreshChart()
                 self.loading(.end)
@@ -138,7 +146,7 @@ class GraphVC: UIViewController, LineChartDelegate {
      */
     func didSelectDataPoint(_ x: CGFloat, yValues: Array<CGFloat>) {
         
-        label.text = "\(xDateLabels)의 몸무게는 \(yValues)kg 입니다."
+        label.text = "\(xDateLabels[Int(x)])의 몸무게는 \(yValues)kg 입니다."
     }
     
     
