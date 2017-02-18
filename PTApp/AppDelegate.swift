@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //인디케이터 라이브러리 관련
         NVActivityIndicatorView.DEFAULT_TYPE = .pacman
-        NVActivityIndicatorView.DEFAULT_COLOR = .blue
+        NVActivityIndicatorView.DEFAULT_COLOR = UIColor(hex: 0x263A7A, alpha: 1)
         NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(5.0)
         
         //Kingfisher 옵션 초기화
