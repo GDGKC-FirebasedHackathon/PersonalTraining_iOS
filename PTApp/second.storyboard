@@ -158,10 +158,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfs-wi-bYX" customClass="CustomView" customModule="PTApp" customModuleProvider="target">
-                                <rect key="frame" x="25" y="226" width="325" height="215"/>
+                                <rect key="frame" x="25" y="227" width="325" height="214"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="클릭하여 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggt-se-8Gh">
-                                        <rect key="frame" x="99" y="100" width="129" height="17"/>
+                                        <rect key="frame" x="98" y="98.5" width="129" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -271,7 +271,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-x7-hrg">
-                                                    <rect key="frame" x="8" y="51" width="327" height="214"/>
+                                                    <rect key="frame" x="16" y="51" width="311" height="214"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="214" id="4EG-zc-zyW"/>
                                                     </constraints>
@@ -322,10 +322,10 @@
                                                 <constraint firstItem="dvD-DF-Aqs" firstAttribute="top" secondItem="eEI-x7-hrg" secondAttribute="bottom" constant="8" id="Xee-fa-RgU"/>
                                                 <constraint firstItem="dvD-DF-Aqs" firstAttribute="leading" secondItem="eEI-x7-hrg" secondAttribute="leading" id="ZDU-Ic-sbn"/>
                                                 <constraint firstItem="aRC-M2-zOs" firstAttribute="top" secondItem="x9b-aB-ms1" secondAttribute="top" constant="15" id="ZZO-Dp-cBt"/>
-                                                <constraint firstAttribute="trailing" secondItem="eEI-x7-hrg" secondAttribute="trailing" constant="8" id="agt-jb-cYo"/>
+                                                <constraint firstAttribute="trailing" secondItem="eEI-x7-hrg" secondAttribute="trailing" constant="16" id="agt-jb-cYo"/>
                                                 <constraint firstItem="tS6-if-KT4" firstAttribute="top" secondItem="cXz-bc-vkC" secondAttribute="bottom" constant="8" id="bsJ-th-J2l"/>
                                                 <constraint firstItem="eEI-x7-hrg" firstAttribute="top" secondItem="aRC-M2-zOs" secondAttribute="bottom" constant="15" id="e4W-fL-wGN"/>
-                                                <constraint firstItem="eEI-x7-hrg" firstAttribute="leading" secondItem="x9b-aB-ms1" secondAttribute="leading" constant="8" id="hgx-Vj-tnp"/>
+                                                <constraint firstItem="eEI-x7-hrg" firstAttribute="leading" secondItem="x9b-aB-ms1" secondAttribute="leading" constant="16" id="hgx-Vj-tnp"/>
                                                 <constraint firstAttribute="trailing" secondItem="cXz-bc-vkC" secondAttribute="trailing" id="hsb-Le-2NW"/>
                                                 <constraint firstAttribute="trailing" secondItem="1G4-R2-YSm" secondAttribute="trailing" constant="8" id="poG-ik-ZUb"/>
                                                 <constraint firstItem="1G4-R2-YSm" firstAttribute="leading" secondItem="tS6-if-KT4" secondAttribute="trailing" constant="7" id="s4j-Ig-kJZ"/>
