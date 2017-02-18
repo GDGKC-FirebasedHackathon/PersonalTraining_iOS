@@ -24,11 +24,12 @@ class CommentView: UIView {
     
     private func initCommentView(name: String, desc: String, y: CGFloat) {
         txtName.frame = CGRect(x: 8, y: 8, width: 0, height: 0)
-        txtDesc.frame = CGRect(x: 8, y: 25, width: self.frame.width - 16, height: 0)
+        txtDesc.frame = CGRect(x: 8, y: 27, width: self.frame.width - 16, height: 0)
         txtName.text = name
         txtDesc.text = desc
         txtName.sizeToFit()
         txtDesc.sizeToFit()
+        txtName.font = UIFont(name: txtName.font.fontName, size: 14)
         self.addSubview(txtName)
         self.addSubview(txtDesc)
         self.frame = CGRect(x: 0, y: y, width: self.frame.width, height: 18 + txtName.frame.height + txtDesc.frame.height)
