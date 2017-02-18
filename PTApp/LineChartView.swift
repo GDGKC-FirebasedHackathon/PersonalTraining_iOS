@@ -186,17 +186,22 @@ open class LineChartView: UIView {
         
         // draw grid
         if x.grid.visible && y.grid.visible {
-            drawGrid()
+            //drawGrid()
         }
         
+        if x.grid.visible {
+            drawXGrid()
+        }
         // draw axes
         if x.axis.visible && y.axis.visible {
-            drawAxes()
+            //drawAxes()
         }
         
         // draw labels
         if x.labels.visible { drawXLabels() }
-        if y.labels.visible { drawYLabels() }
+        if y.labels.visible {
+            //drawYLabels() 
+        }
         
         // draw lines
         for (lineIndex, _) in dataStore.enumerated() {
