@@ -21,11 +21,14 @@ class PopUpWeightVC: UIViewController {
         
         if let vc = presentingViewController?.childViewControllers[0].childViewControllers[0] as? GraphVC {
             
-            vc.txtWeight.text = editWeight.text
-            vc.txtDate.text = editDate.text
-            vc.weightlist.append(WeightVO.init(weight: Float(vc.txtWeight.text!), date: vc.txtDate.text))
-            vc.recentWeight()
-            vc.initChartView()
+            vc.txtWeight = editWeight.text
+            vc.txtDate = editDate.text
+            let wvo = WeightVO.init(weight: Float(vc.txtWeight!), date: vc.txtDate!)
+            vc.weightlist.append(wvo)
+            vc.weightlist.remove(at: 0)
+            vc.recentWeight(wvo: wvo)
+            vc.refreshChart()
+            //vc.initChartView()
             vc.dismiss(animated: true, completion: nil)
             
         }
